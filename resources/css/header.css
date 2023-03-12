@@ -1,0 +1,143 @@
+/* header css */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 10;
+    gap: 2em;
+    background-color: #36418198;
+}
+
+header .logo {
+    font-size: 1.5em;
+    color: #44d6e9;
+    text-decoration: none;
+    font-weight: 600;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    padding-left: 50px;
+}
+
+header .navigation {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    flex: 1.5;
+    height: 100%;
+    margin-top: 0;
+        margin-bottom: 0;
+}
+
+header .navigation li {
+    list-style: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    /* padding-left: 20px; */
+}
+
+header .navigation li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+header .navigation li a:hover {
+    color: #44d6e9;
+}
+
+/* #movies {
+    position: relative;
+    height: 100%;
+} */
+
+.menu-contant {
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    height: max-content;
+    background-color: var(--primary-dark);
+    transform-origin: 0% 0%;
+    transform: scaleY(0);
+    transition: 0.3s;
+}
+
+.menu-contant a {
+    padding: 15px 25px;
+}
+
+.menu-contant a:hover {
+    background-color: var(--primary-light);
+}
+
+.navigation>#movies:hover .menu-contant {
+    transform: scaleY(100%);
+}
+
+#downicon {
+    font-size: 10px;
+    margin-left: 7px;
+}
+
+header .search {
+    position: relative;
+    flex: 2;
+}
+
+:root {
+    --search-bar-space: 15px;
+}
+
+header .search input {
+    outline: none;
+    border: none;
+    color: #fff;
+    background-color: #0307168a;
+    border-radius: 5px;
+    padding: 10px 0;
+    padding-left: calc(var(--search-bar-space) + 2em);
+    width: 500px;
+    height: 40px;
+}
+
+header .search input::placeholder {
+    color: #fff;
+    opacity: 0.5;
+}
+
+header .search .fa-solid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    translate: var(--search-bar-space) calc(50% + 5px);
+    color: #fff;
+}
+
+.login {
+    display: flex;
+    width: 200px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding-right: 50px;
+}
+
+
+.login>*:first-child {
+    font-size: 30px;
+    color: #fff;
+}
+
+.login>*:first-child:hover {
+    font-size: 35px;
+    color: rgb(19, 211, 224);
+}

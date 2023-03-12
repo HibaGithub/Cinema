@@ -1,9 +1,10 @@
 import React from "react";
 // import '../css/app.css';
+import { Link } from "@inertiajs/react"; 
 
 
-export default function Header(){
-    return(
+export default function Header() {
+    return (
         <header>
             <a href="#" class="logo">Cinimania</a>
             <ul class="navigation">
@@ -25,12 +26,12 @@ export default function Header(){
                 <input type="text" placeholder="search" />
                 <i class="fa-solid fa-magnifying-glass"></i>
             </div>
-            <a href="./cenimanialogin/index.html">
+            <a to="../login/login">
                 <div class="login">
                     <i id="icon-login" class="fa-solid fa-circle-user"></i>
                 </div>
             </a>
         </header>
-        
+
     )
 }

@@ -42,5 +42,14 @@ Route::get('/',function(){
 
         return Inertia::render('PAGE1/acceille');
  });
+//  login
+Route::get('log', function () {
+        return Inertia::render('login/login');
+});
+//  sigup
+Route::get('sig', function () {
+        return Inertia::render('login/signup');
+});
+
 
 require __DIR__.'/auth.php';
