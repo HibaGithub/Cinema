@@ -40,7 +40,7 @@ use Inertia\Inertia;
 // });
 Route::get('/',function(){
 
-        return Inertia::render('component/header');
+        return Inertia::render('PAGE1/acceille');
  });
 
 require __DIR__.'/auth.php';
