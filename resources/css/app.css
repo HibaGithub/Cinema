@@ -40,7 +40,7 @@ body {
     margin: 0px;
     padding: 0px;
     background-color: #080e2c;
-    /* width: 100vw; */
+    width: 100vw;
     display: grid;
     grid-template-rows: repeat(4, max-content);
     gap: 8em;
@@ -66,12 +66,12 @@ body {
     width: 100%;
     position: absolute;
     z-index: 1;
-    opacity: 0;
+    opacity: 1;
     transition: 0.5s;
     transition-delay: 300ms;
 }
 
-p {
+ p {
     margin: 0;
 }
 
@@ -87,19 +87,20 @@ p {
 }
 
 .film:nth-child(1) {
-    background: url("../../assets/img/poster.jpg");
+    background: url("./image/poster.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    width: 70px;
 }
 
-.film:nth-child(2) {
-    background: url("../../assets/img/titanic.jfif");
+/* .film:nth-child(2) {
+    background: url("./image/R\ \(2\).jfif");
     background-size: cover;
     background-repeat: no-repeat;
-}
+} */
 
 
-.film:nth-child(3) {
+/*.film:nth-child(3) {
     background: url("../../assets/img/superhero.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -109,17 +110,17 @@ p {
     background: url("../../assets/img//20319887.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-}
+}*/
 
 .content {
     padding: 0 10em;
     z-index: 2;
-    opacity: 0;
+    /* opacity: 0; */
     width: 40em;
     transform: translateY(-70px);
     transition: 0.5s;
-    transition-delay: 500ms;
-}
+    /* transition-delay: 500ms; */
+} 
 
 .content>.label {
     display: flex;
@@ -177,8 +178,9 @@ p {
 /* category */
 
 .categorie-content {
-    width: 80%;
-    height: 300px;
+    padding:  80px 0px 0px 120px ;
+    width: 90%;
+    height: 360px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-content: center;
@@ -188,7 +190,7 @@ p {
 
 .categorie-enf {
     width: 100%;
-    height: 130px;
+    height: 110px;
     background-color: #101b56;
     border-radius: 10px;
     display: flex;
@@ -256,12 +258,14 @@ p {
     color: #44d6e9;
 }
 
-
 /* movies slider */
 
 .top-movies-section,
 .new-movies-section {
     display: flex;
+    padding-bottom: 80px;
+    padding-top: 80px;  
+  /* height: 100px; */
     justify-content: center;
     align-items: center;
     width: max-content;
@@ -395,5 +399,3 @@ p {
     align-items: center;
     justify-content: center;
 }
-
-

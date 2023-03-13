@@ -26,11 +26,11 @@ export default function Header() {
                 <input type="text" placeholder="search" />
                 <i class="fa-solid fa-magnifying-glass"></i>
             </div>
-            <a to="../login/login">
+            <Link to="/log">
                 <div class="login">
                     <i id="icon-login" class="fa-solid fa-circle-user"></i>
                 </div>
-            </a>
+            </Link>
         </header>
 
     )

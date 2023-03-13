@@ -1,16 +1,17 @@
 /* login sugnup */
-.login {
+.logIn {
     height: 100vh;
-    background-image: url(../imagelogin/2.png);
+    background-image: url(./image/imagelogin/2.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     opacity: 0.8;
+    width: 100%;
 }
 
 .SignUp {
     height: 100vh;
-    background-image: url(../imagelogin/3.png);
+    background-image: url(./image/imagelogin/3.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

@@ -44,7 +44,7 @@ Route::get('/',function(){
  });
 //  login
 Route::get('log', function () {
-        return Inertia::render('login/login');
+        return Inertia::render('login/log-in');
 });
 //  sigup
 Route::get('sig', function () {
