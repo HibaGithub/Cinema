@@ -4,16 +4,11 @@ import ContentPage1 from "./pagecontente";
 // import FlashCard from "./flashDeals/FlashCard";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "../login/log-in";
-export default function  Appale(){
+export default function  HomePage(){
     return(<>
-    <BrowserRouter>
           <Header />
           <ContentPage1 />
           <Footer />
-    <Routes>
-          <Route path="/" element={<Login/>} />
-            </Routes>
-        </BrowserRouter>
      
         {/* <FlashCard/> */}
         
