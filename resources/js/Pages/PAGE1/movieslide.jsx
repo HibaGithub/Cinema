@@ -1,4 +1,6 @@
-import React, { Component } from "react";
+import React, { useRef, useState } from "react";
+// import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
 import Slider from "react-slick";
 
 export default class Responsive extends Component {
@@ -70,3 +72,6 @@ export default class Responsive extends Component {
         );
     }
 }
+
+
+
