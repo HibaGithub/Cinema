@@ -127,7 +127,7 @@ export default function ContentPage1() {
                     <div class="slider">
                         <div class="film-poster">
                             <div class="poster">
-                                <img alt="" src="" />
+                                <img alt="" src="./images/topmovie/acream.jfif" />
                             </div>
                             <div class="detail">
                                 <h2>Black Adam</h2>
@@ -140,7 +140,7 @@ export default function ContentPage1() {
                         </div>
                         <div class="film-poster">
                             <div class="poster">
-                                <img alt="" src="./assets/img/black-adam.jpg" />
+                                <img alt="" src="./images/topmovie/Amsterdam_(2022_film).jpg" />
                             </div>
                             <div class="detail">
                                 <h2>Black Adam</h2>
@@ -153,7 +153,7 @@ export default function ContentPage1() {
                         </div>
                         <div class="film-poster">
                             <div class="poster">
-                                <img alt="" src="./assets/img/black-adam.jpg" />
+                                <img alt="" src="./images/topmovie/black-adam.jpg" />
                             </div>
                             <div class="detail">
                                 <h2>Black Adam</h2>
@@ -167,7 +167,7 @@ export default function ContentPage1() {
 
                         <div class="film-poster">
                             <div class="poster">
-                                <img alt="" src="./assets/img/black-adam.jpg" />
+                                <img alt="" src="" />
                             </div>
                             <div class="detail">
                                 <h2>Black Adam</h2>
@@ -180,10 +180,10 @@ export default function ContentPage1() {
                         </div>
                         <div class="film-poster">
                             <div class="poster">
-                                <img alt="" src="./assets/img/black-adam.jpg" />
+                                <img alt="" src="" />
                             </div>
                             <div class="detail">
-                                <h2>Black Adam</h2>
+                                <h2>DC_League_of_Super_Pets</h2>
                                 <p>
                                     <span>Sci-fi/Action</span>
                                     <span>2h 28m</span>

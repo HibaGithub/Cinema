@@ -11,6 +11,11 @@ import { Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 export default function Slideshow() {
+  // const images = [
+  //   { image: require("./images/2.jpg") },
+  //   {image: require("./images/2.jpg") },
+  //   { image: require("./images/2.jpg") },
+  // ];
   return (
     <>
       <Swiper
@@ -31,15 +36,12 @@ export default function Slideshow() {
               ]}
         className="mySwiper"
       >
-        <SwiperSlide>Slide 1</SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide>
+        <SwiperSlide><img className="swiper-image" src='' alt=''/></SwiperSlide>
+        <SwiperSlide><img src="{images[0]}" alt='' /></SwiperSlide>
+        <SwiperSlide><img src="{images[0]}" alt='' /></SwiperSlide>
+        <SwiperSlide><img src="{images[0]}" alt='' /></SwiperSlide>
+        {/* hawelt ndirhom f variable o nbda n3it 23lihom mais masd9och */}
+      
       </Swiper>
     </>
   );
