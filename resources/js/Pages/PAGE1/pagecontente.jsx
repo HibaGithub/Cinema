@@ -1,6 +1,18 @@
 import React from "react";
 import Slideshow from "./MoviesSlideShow";
 
+const categorieStyle = {
+    'padding': '88px 120px 0',
+    'width': '100%',
+    'box-sizing': 'border-box',
+    'height': 'max-content',
+    'display': 'grid',
+    'grid-template-columns': 'repeat(4, max-content)',
+    'justify-content': 'center',
+    'gap': '2em',
+    'justify-self': 'center',
+}
+
 export default function ContentPage1() {
     return (
         <>
@@ -9,11 +21,11 @@ export default function ContentPage1() {
 
             {/* <!-- category --> */}
 
-            <div id="categorie" class="categorie-content">
-                <div class="categorie-enf" id="mask-nav">
+            <div id="categories" className="categories" >
+                <div className="categorie-enf" id="mask-nav">
                     <div>
-                        <div class="icon">
-                            <i class="fa-solid fa-mask" id="econcat"></i>
+                        <div className="icon">
+                            <i className="fa-solid fa-mask" id="econcat"></i>
                         </div>
                         <div id="descripte">
                             <p>Mestery</p>
@@ -23,10 +35,10 @@ export default function ContentPage1() {
                     </div>
                 </div>
 
-                <div class="categorie-enf">
+                <div className="categorie-enf">
                     <div>
-                        <div class="icon">
-                            <i class="fa-solid fa-heart" id="econcat"></i>
+                        <div className="icon">
+                            <i className="fa-solid fa-heart" id="econcat"></i>
                         </div>
                         <div id="descripte">
                             <p>Romance</p>
@@ -36,10 +48,10 @@ export default function ContentPage1() {
                     </div>
                 </div>
 
-                <div class="categorie-enf">
+                <div className="categorie-enf">
                     <div>
-                        <div class="icon">
-                            <i class="fa-solid fa-ghost" id="econcat"></i>
+                        <div className="icon">
+                            <i className="fa-solid fa-ghost" id="econcat"></i>
                         </div>
                         <div id="descripte">
                             <p>Horror</p>
@@ -49,11 +61,11 @@ export default function ContentPage1() {
                     </div>
                 </div>
 
-                <div class="categorie-enf">
+                <div className="categorie-enf">
                     <div>
-                        <div class="icon">
+                        <div className="icon">
                             <i
-                                class="fa-solid fa-skull-crossbones"
+                                className="fa-solid fa-skull-crossbones"
                                 id="econcat"
                             ></i>
                         </div>
@@ -65,10 +77,10 @@ export default function ContentPage1() {
                     </div>
                 </div>
 
-                <div class="categorie-enf" id="contenu">
+                <div className="categorie-enf" id="contenu">
                     <div>
-                        <div class="icon">
-                            <i class="fa-solid fa-gun"></i>
+                        <div className="icon">
+                            <i className="fa-solid fa-gun"></i>
                         </div>
                         <div id="descripte">
                             <p>Action</p>
@@ -78,10 +90,10 @@ export default function ContentPage1() {
                     </div>
                 </div>
 
-                <div class="categorie-enf">
+                <div className="categorie-enf">
                     <div>
-                        <div class="icon">
-                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        <div className="icon">
+                            <i className="fa-solid fa-wand-magic-sparkles"></i>
                         </div>
                         <div id="descripte">
                             <p>Fantasy</p>
@@ -91,10 +103,10 @@ export default function ContentPage1() {
                     </div>
                 </div>
 
-                <div class="categorie-enf">
+                <div className="categorie-enf">
                     <div>
-                        <div class="icon">
-                            <i class="fa-regular fa-face-laugh-squint"></i>
+                        <div className="icon">
+                            <i className="fa-regular fa-face-laugh-squint"></i>
                         </div>
                         <div id="descripte">
                             <p>Comedy</p>
@@ -104,10 +116,10 @@ export default function ContentPage1() {
                     </div>
                 </div>
 
-                <div class="categorie-enf">
+                <div className="categorie-enf">
                     <div>
-                        <div class="icon">
-                            <i class="fa-solid fa-masks-theater"></i>
+                        <div className="icon">
+                            <i className="fa-solid fa-masks-theater"></i>
                         </div>
                         <div id="descripte">
                             <p>Drama</p>
@@ -119,17 +131,17 @@ export default function ContentPage1() {
             </div>
 
             {/* <!-- top movies--> */}
-            <section id="Topmovie" class="top-movies-section">
-                <div class="top-movies">
-                    <div class="section-title">
+            <section id="Topmovie" className="top-movies-section">
+                <div className="top-movies">
+                    <div className="section-title">
                         <h1>TOP POPULARE WATCHED MOVIES</h1>
                     </div>
-                    <div class="slider">
-                        <div class="film-poster">
-                            <div class="poster">
-                                <img alt="" src="./images/topmovie/acream.jfif" />
+                    <div className="slider">
+                        <div className="film-poster">
+                            <div className="poster">
+                                <img alt="" src="" />
                             </div>
-                            <div class="detail">
+                            <div className="detail">
                                 <h2>Black Adam</h2>
                                 <p>
                                     <span>Sci-fi/Action</span>
@@ -138,11 +150,11 @@ export default function ContentPage1() {
                                 </p>
                             </div>
                         </div>
-                        <div class="film-poster">
-                            <div class="poster">
-                                <img alt="" src="./images/topmovie/Amsterdam_(2022_film).jpg" />
+                        <div className="film-poster">
+                            <div className="poster">
+                                <img alt="" src="./assets/img/black-adam.jpg" />
                             </div>
-                            <div class="detail">
+                            <div className="detail">
                                 <h2>Black Adam</h2>
                                 <p>
                                     <span>Sci-fi/Action</span>
@@ -151,11 +163,11 @@ export default function ContentPage1() {
                                 </p>
                             </div>
                         </div>
-                        <div class="film-poster">
-                            <div class="poster">
-                                <img alt="" src="./images/topmovie/black-adam.jpg" />
+                        <div className="film-poster">
+                            <div className="poster">
+                                <img alt="" src="./assets/img/black-adam.jpg" />
                             </div>
-                            <div class="detail">
+                            <div className="detail">
                                 <h2>Black Adam</h2>
                                 <p>
                                     <span>Sci-fi/Action</span>
@@ -165,11 +177,11 @@ export default function ContentPage1() {
                             </div>
                         </div>
 
-                        <div class="film-poster">
-                            <div class="poster">
-                                <img alt="" src="" />
+                        <div className="film-poster">
+                            <div className="poster">
+                                <img alt="" src="./assets/img/black-adam.jpg" />
                             </div>
-                            <div class="detail">
+                            <div className="detail">
                                 <h2>Black Adam</h2>
                                 <p>
                                     <span>Sci-fi/Action</span>
@@ -178,12 +190,12 @@ export default function ContentPage1() {
                                 </p>
                             </div>
                         </div>
-                        <div class="film-poster">
-                            <div class="poster">
-                                <img alt="" src="" />
+                        <div className="film-poster">
+                            <div className="poster">
+                                <img alt="" src="./assets/img/black-adam.jpg" />
                             </div>
-                            <div class="detail">
-                                <h2>DC_League_of_Super_Pets</h2>
+                            <div className="detail">
+                                <h2>Black Adam</h2>
                                 <p>
                                     <span>Sci-fi/Action</span>
                                     <span>2h 28m</span>
@@ -192,13 +204,13 @@ export default function ContentPage1() {
                             </div>
                         </div>
                     </div>
-                    <div class="pre">
-                        <ion-icon class="prev" name="ios-arrow-back">
+                    <div className="pre">
+                        <ion-icon className="prev" name="ios-arrow-back">
                             ‹
                         </ion-icon>
                     </div>
-                    <div class="next">
-                        <ion-icon class="nex" name="ios-arrow-forward">
+                    <div className="next">
+                        <ion-icon className="nex" name="ios-arrow-forward">
                             ›
                         </ion-icon>
                     </div>
@@ -207,20 +219,20 @@ export default function ContentPage1() {
 
             {/* <!-- new movie --> */}
             <div id="Newmovie">
-                <section class="new-movies-section">
-                    <div class="new-movies">
-                        <div class="section-title">
+                <section className="new-movies-section">
+                    <div className="new-movies">
+                        <div className="section-title">
                             <h1>NEW MOVIES YOU MAY LIKE</h1>
                         </div>
-                        <div class="slider">
-                            <div class="film-poster">
-                                <div class="poster">
+                        <div className="slider">
+                            <div className="film-poster">
+                                <div className="poster">
                                     <img
                                         alt=""
                                         src="./assets/img/black-adam.jpg"
                                     />
                                 </div>
-                                <div class="detail">
+                                <div className="detail">
                                     <h2>Black Adam</h2>
                                     <p>
                                         <span>Sci-fi/Action</span>
@@ -229,14 +241,14 @@ export default function ContentPage1() {
                                     </p>
                                 </div>
                             </div>
-                            <div class="film-poster">
-                                <div class="poster">
+                            <div className="film-poster">
+                                <div className="poster">
                                     <img
                                         alt=""
                                         src="./assets/img/black-adam.jpg"
                                     />
                                 </div>
-                                <div class="detail">
+                                <div className="detail">
                                     <h2>Black Adam</h2>
                                     <p>
                                         <span>Sci-fi/Action</span>
@@ -245,14 +257,14 @@ export default function ContentPage1() {
                                     </p>
                                 </div>
                             </div>
-                            <div class="film-poster">
-                                <div class="poster">
+                            <div className="film-poster">
+                                <div className="poster">
                                     <img
                                         alt=""
                                         src="./assets/img/black-adam.jpg"
                                     />
                                 </div>
-                                <div class="detail">
+                                <div className="detail">
                                     <h2>Black Adam</h2>
                                     <p>
                                         <span>Sci-fi/Action</span>
@@ -261,14 +273,14 @@ export default function ContentPage1() {
                                     </p>
                                 </div>
                             </div>
-                            <div class="film-poster">
-                                <div class="poster">
+                            <div className="film-poster">
+                                <div className="poster">
                                     <img
                                         alt=""
                                         src="./assets/img/black-adam.jpg"
                                     />
                                 </div>
-                                <div class="detail">
+                                <div className="detail">
                                     <h2>Black Adam</h2>
                                     <p>
                                         <span>Sci-fi/Action</span>
@@ -277,14 +289,14 @@ export default function ContentPage1() {
                                     </p>
                                 </div>
                             </div>
-                            <div class="film-poster">
-                                <div class="poster">
+                            <div className="film-poster">
+                                <div className="poster">
                                     <img
                                         alt=""
                                         src="./assets/img/black-adam.jpg"
                                     />
                                 </div>
-                                <div class="detail">
+                                <div className="detail">
                                     <h2>Black Adam</h2>
                                     <p>
                                         <span>Sci-fi/Action</span>
@@ -293,14 +305,14 @@ export default function ContentPage1() {
                                     </p>
                                 </div>
                             </div>
-                            <div class="film-poster">
-                                <div class="poster">
+                            <div className="film-poster">
+                                <div className="poster">
                                     <img
                                         alt=""
                                         src="./assets/img/black-adam.jpg"
                                     />
                                 </div>
-                                <div class="detail">
+                                <div className="detail">
                                     <h2>Black Adam</h2>
                                     <p>
                                         <span>Sci-fi/Action</span>
@@ -309,14 +321,14 @@ export default function ContentPage1() {
                                     </p>
                                 </div>
                             </div>
-                            <div class="film-poster">
-                                <div class="poster">
+                            <div className="film-poster">
+                                <div className="poster">
                                     <img
                                         alt=""
                                         src="./assets/img/black-adam.jpg"
                                     />
                                 </div>
-                                <div class="detail">
+                                <div className="detail">
                                     <h2>Black Adam</h2>
                                     <p>
                                         <span>Sci-fi/Action</span>
@@ -325,14 +337,14 @@ export default function ContentPage1() {
                                     </p>
                                 </div>
                             </div>
-                            <div class="film-poster">
-                                <div class="poster">
+                            <div className="film-poster">
+                                <div className="poster">
                                     <img
                                         alt=""
                                         src="./assets/img/black-adam.jpg"
                                     />
                                 </div>
-                                <div class="detail">
+                                <div className="detail">
                                     <h2>Black Adam</h2>
                                     <p>
                                         <span>Sci-fi/Action</span>
@@ -341,14 +353,14 @@ export default function ContentPage1() {
                                     </p>
                                 </div>
                             </div>
-                            <div class="film-poster">
-                                <div class="poster">
+                            <div className="film-poster">
+                                <div className="poster">
                                     <img
                                         alt=""
                                         src="./assets/img/black-adam.jpg"
                                     />
                                 </div>
-                                <div class="detail">
+                                <div className="detail">
                                     <h2>Black Adam</h2>
                                     <p>
                                         <span>Sci-fi/Action</span>
@@ -357,14 +369,14 @@ export default function ContentPage1() {
                                     </p>
                                 </div>
                             </div>
-                            <div class="film-poster">
-                                <div class="poster">
+                            <div className="film-poster">
+                                <div className="poster">
                                     <img
                                         alt=""
                                         src="./assets/img/black-adam.jpg"
                                     />
                                 </div>
-                                <div class="detail">
+                                <div className="detail">
                                     <h2>Black Adam</h2>
                                     <p>
                                         <span>Sci-fi/Action</span>
@@ -374,13 +386,13 @@ export default function ContentPage1() {
                                 </div>
                             </div>
                         </div>
-                        <div class="pre">
-                            <ion-icon class="prev" name="ios-arrow-back">
+                        <div className="pre">
+                            <ion-icon className="prev" name="ios-arrow-back">
                                 ‹
                             </ion-icon>
                         </div>
-                        <div class="next">
-                            <ion-icon class="nex" name="ios-arrow-forward">
+                        <div className="next">
+                            <ion-icon className="nex" name="ios-arrow-forward">
                                 ›
                             </ion-icon>
                         </div>
