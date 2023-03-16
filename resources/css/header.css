@@ -98,6 +98,7 @@ header .search {
 }
 
 header .search input {
+    position: relative;
     outline: none;
     border: none;
     color: #fff;
@@ -105,7 +106,8 @@ header .search input {
     border-radius: 5px;
     padding: 10px 0;
     padding-left: calc(var(--search-bar-space) + 2em);
-    width: 500px;
+    width: 100%;
+    max-width: 500px;
     height: 40px;
 }
 

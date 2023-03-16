@@ -23,8 +23,10 @@ export default function Header() {
                 <li><Link href="Tarif">Tarif</Link></li>
             </ul>
             <div class="search">
-                <input type="text" placeholder="search" />
-                <i class="fa-solid fa-magnifying-glass"></i>
+                <div className="search-bar">
+                    <input type="text" placeholder="search" />
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
             </div>
             <Link href="/log">
                 <div class="login">
