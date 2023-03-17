@@ -68,11 +68,12 @@ body {
     object-fit: cover;
 }
 
-.slideshow {
+.mySwiper{
     display: flex;
     position: relative;
     overflow: hidden;
     height: max-content;
+    padding-bottom: 150px;
 }
 
 .shadow {
@@ -84,6 +85,7 @@ body {
     );
     height: 100%;
     width: 100%;
+    /* padding: 120px; */
     position: absolute;
     z-index: 1;
     opacity: 1;
@@ -194,8 +196,8 @@ p {
 }
 
 .content > button:hover {
-    background-color: #49eaff;
-    box-shadow: #2dd0e67e 0px 0px 2em;
+    background-color: #25a0ec;
+    /* box-shadow: #2dd0e67e 0px 0px 2em; */
 }
 
 
@@ -327,44 +329,39 @@ p {
 
 /* movies slider */
 
-.top-movies-section,
-.new-movies-section {
+
+.center {
     display: flex;
-    padding-bottom: 80px;
-    padding-top: 80px;
+    padding: 15px 80px 0px 80px;
+    /* padding-bottom: 80px; */
     /* height: 100px; */
     justify-content: center;
     align-items: center;
-    width: max-content;
+    /* width: max-content; */
     width: 100%;
+    /* height: 150px; */
 }
 
-.top-movies,
-.new-movies {
-    position: relative;
-}
 
-.section-title > h1 {
-    font-family: var(--font);
-    font-weight: var(--font-bold);
+
+.section-title > h3 {
+     /* font-family:0.5px; */
+    font-weight: 400; 
     color: white;
-    margin-bottom: 24px;
-    border-left: 6px solid;
-    padding-left: 12px;
+    margin-top: 92px;
+    /* border-left: 6px solid; */
+    padding-left: 80px;
 }
 
 .slider {
     height: fit-content;
-    width: calc(
-        (var(--poster-width) + var(--poster-space)) * var(--poster-per-view) -
-            var(--poster-space)
-    );
+    width:50px;
     display: flex;
     gap: var(--poster-space);
     overflow: hidden;
-}
-
-.slider > .film-poster {
+} 
+ 
+ .film-poster {
     /* background-color: rgb(128, 33, 218); */
     width: 100px;
     height: 100%;
@@ -375,7 +372,7 @@ p {
     place-content: center;
 }
 
-.new-movies .poster {
+ .film-poster .poster {
     position: relative;
 }
 
@@ -394,7 +391,7 @@ p {
 .poster > img {
     border-radius: 10px;
     width: var(--poster-width);
-    height: 100%;
+    height: 300px;
 }
 
 /* film detail */
@@ -431,41 +428,4 @@ p {
     content: "\2022";
     font-size: 12px;
     margin: 0 9px;
-}
-
-/* slide controlles */
-
-.pre,
-.next {
-    position: absolute;
-    translate: 0 -50%;
-    top: 50%;
-    width: 40px;
-    height: 40px;
-    background-color: var(--primary-light);
-    border: solid var(--secondary) 4px;
-    color: var(--secondary);
-    border-radius: 50%;
-    display: grid;
-    place-items: center;
-    cursor: pointer;
-}
-
-.pre,
-.next > ion-icon {
-    font-size: 2em;
-}
-
-.pre {
-    left: calc(-40px / 2);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.next {
-    right: calc(-40px / 2);
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }

@@ -3,6 +3,9 @@ import '../css/app.css';
  import '../css/loginsignup.css';
 import '../css/header.css';
 import '../css/footer.css';
+// slidetopmovie css
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 import { createRoot } from 'react-dom/client';
 import { createInertiaApp } from '@inertiajs/react';

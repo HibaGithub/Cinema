@@ -10,12 +10,12 @@ import movie7 from '../../../css/image/slide1.png'
 import movie8 from '../../../css/image/slide2.png'
 import movie9 from '../../../css/image/slide1.png'
 
-export default class SwipeToSlide extends Component {
+export default class Newmovie extends Component {
     render() {
         const settings = {
             className: "center",
             infinite: true,
-            centerPadding: "70px",
+            centerPadding: "30px",
             slidesToShow: 5,
             swipeToSlide: true,
             afterChange: function (index) {
@@ -26,9 +26,9 @@ export default class SwipeToSlide extends Component {
         };
         return (
             <div >
-               
+
                 <div className="section-title">
-                    <h3>TOP POPULARE WATCHED MOVIES</h3>
+                    <h3>NEW MOVIES</h3>
                 </div>
                 <Slider {...settings} >
                     <div >
@@ -144,7 +144,7 @@ export default class SwipeToSlide extends Component {
                             <div class="detail">
                                 <h2>Black Adam</h2>
                                 <p>
-                               
+
                                     <span>Sci-fi/Action</span>
                                     <span>2h 28m</span>
                                     <span>13+</span>
@@ -168,7 +168,7 @@ export default class SwipeToSlide extends Component {
                         </div>
                     </div>
                 </Slider>
-               
+
             </div>
         );
     }

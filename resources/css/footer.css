@@ -3,10 +3,11 @@ footer {
     display: grid;
     grid-template-columns: repeat(4, auto);
     background-color: var(--primary-dark);
-    padding: 10px;
+    /* padding: 90px; */
     justify-content: space-evenly;
     gap: 1.5em;
-    padding: 5em 0;
+    padding: 5em ;
+    margin-top: 100px;
 }
 
 footer * {

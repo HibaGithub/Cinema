@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "@inertiajs/react";
 export default function Login() {
     return (
         <section class="logIn">
@@ -14,10 +15,10 @@ export default function Login() {
                     <button class="btn main-bg" id="loginBtn">Login</button>
                     <div class="mt-4 mb-2 w-75 m-auto">
                         <span class="font-style">Don’t have an account?</span>
-                        <a href="signup.html" class="main-color sign-link">Sign Up Now!</a>
+                        <Link href="/sig" class="main-color sign-link">Sign Up Now!</Link>
                     </div>
 
-                    <a class="p-5" href="#" id="back"><i class="fa-solid fa-house"></i></a>
+                    <Link class="p-5" href="/" id="back"><i class="fa-solid fa-house"></i></Link>
                 </div>
             </div>
 
