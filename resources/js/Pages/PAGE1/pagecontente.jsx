@@ -1,18 +1,8 @@
 import React from "react";
 import Slideshow from "./MoviesSlideShow";
-import SwipeToSlide from "./movieslide";
 import Newmovie from "./newmovieslide";
-const categorieStyle = {
-    'padding': '88px 120px 0',
-    'width': '100%',
-    'box-sizing': 'border-box',
-    'height': 'max-content',
-    'display': 'grid',
-    'grid-template-columns': 'repeat(4, max-content)',
-    'justify-content': 'center',
-    'gap': '2em',
-    'justify-self': 'center',
-}
+import TopMovieSlide from "./movieslide";
+
 
 export default function ContentPage1() {
     return (
@@ -132,7 +122,7 @@ export default function ContentPage1() {
             </div>
 
             {/* <!-- top movies--> */}
-            <SwipeToSlide />
+            <TopMovieSlide />
             
             {/* <!-- new movie --> */}
             <Newmovie />

@@ -41,7 +41,7 @@ export default function Slideshow() {
                     //   Pagination,
                     //   Navigation
                 ]}
-                className="mySwiper"
+                className="Slideshow-movies"
             >
                 <SwiperSlide>
                     <div class="shadow"></div>
