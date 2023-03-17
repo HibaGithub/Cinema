@@ -221,7 +221,7 @@ p {
     justify-self: center;
 }
 
-@media only screen and (max-width: 1024px){
+@media only screen and (max-width: 1280px){
     .categories {
         grid-template-columns: repeat(3, max-content);
     }
@@ -247,10 +247,11 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: background-color .2s;
 }
 
 .categorie-enf:hover {
-    background-color: #253383;
+    background-color: var(--secondary);
 }
 
 .categorie-enf > div {
@@ -281,10 +282,6 @@ p {
             padding: 1.8em;
         }
         
-        .categorie-enf:hover {
-            background-color: #253383;
-        }
-        
         .categorie-enf > div .icon {
             width: 4em;
             height: 4em;
@@ -292,6 +289,9 @@ p {
         
         .categorie-enf > div .icon > i {
             font-size: 2em;
+        }
+        #descripte span {
+            padding: 10px 0;
         }
 
 }
@@ -308,11 +308,21 @@ p {
     justify-content: space-between;
 }
 
+#descripte > *{
+    transition: all 0.2s;
+    display: inline;
+}
+
 #descripte p {
     font-style: normal;
     font-weight: 400;
     font-size: 23px;
     color: #ffffff;
+    margin: -6px 0;
+}
+.categorie-enf:hover #descripte p {
+    font-weight: 500;
+    color: var(--primary);
 }
 
 #descripte span {
@@ -325,12 +335,22 @@ p {
     opacity: 0.6;
 }
 
+.categorie-enf:hover #descripte span {
+    font-weight: 200;
+    color: var(--primary);
+}
+
 #descripte a {
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
     color: #44d6e9;
+}
+
+.categorie-enf:hover #descripte a {
+    font-weight: 500;
+    color: var(--primary-dark);
 }
 
 /* movies slider */
