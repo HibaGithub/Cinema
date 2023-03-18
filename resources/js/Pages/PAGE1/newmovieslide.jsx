@@ -10,15 +10,17 @@ import "swiper/css/navigation";
 import { Navigation } from "swiper";
 
 // import images
-import movie1 from '../../../css/image/slide1.png'
-import movie2 from '../../../css/image/slide2.png'
-import movie3 from '../../../css/image/slide1.png'
-import movie4 from '../../../css/image/slide2.png'
-import movie5 from '../../../css/image/slide1.png'
-import movie6 from '../../../css/image/slide2.png'
-import movie7 from '../../../css/image/slide1.png'
-import movie8 from '../../../css/image/slide2.png'
-import movie9 from '../../../css/image/slide1.png'
+import movie1 from "../../../css/image/slide1.png";
+import movie2 from "../../../css/image/slide2.png";
+import movie3 from "../../../css/image/slide1.png";
+import movie4 from "../../../css/image/slide2.png";
+import movie5 from "../../../css/image/slide1.png";
+import movie6 from "../../../css/image/slide2.png";
+import movie7 from "../../../css/image/slide1.png";
+import movie8 from "../../../css/image/slide2.png";
+import movie9 from "../../../css/image/slide1.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronCircleRight } from "@fortawesome/free-solid-svg-icons";
 
 let movies = [
     {
@@ -86,15 +88,17 @@ let movies = [
     },
 ];
 
-
 export default function NewMovieSlide() {
     return (
         <div className="new-movies-section">
             <h3>NEW IN CINEMA</h3>
             <Swiper
-                slidesPerView={5}
+                slidesPerView={2}
                 spaceBetween={10}
-                navigation={true}
+                navigation={{
+                    nextEl: ".movies-next-button",
+                    prevEl: ".movies-prev-button",
+                }}
                 breakpoints={{
                     768: {
                         slidesPerView: 2,
@@ -111,12 +115,12 @@ export default function NewMovieSlide() {
                     1400: {
                         slidesPerView: 5,
                         spaceBetween: 10,
-                    }
+                    },
                 }}
                 modules={[Navigation]}
                 className="new-movies"
             >
-                             {movies.map((movie) => (
+                {movies.map((movie) => (
                     <SwiperSlide>
                         <div className="film-poster">
                             <div class="poster">
@@ -139,5 +143,3 @@ export default function NewMovieSlide() {
         </div>
     );
 }
-
-

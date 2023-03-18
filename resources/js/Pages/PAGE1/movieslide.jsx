@@ -91,7 +91,7 @@ export default function TopMovieSlide() {
         <div className="top-movies-section">
             <h3>TOP POPULARE WATCHED MOVIES</h3>
             <Swiper
-                slidesPerView={5}
+                slidesPerView={2}
                 spaceBetween={10}
                 navigation={true}
                 breakpoints={{
