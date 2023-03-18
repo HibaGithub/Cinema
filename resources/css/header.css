@@ -11,6 +11,7 @@ header {
     z-index: 10;
     gap: 2em;
     background-color: #36418198;
+    padding: 0 25px;
 }
 
 header .logo {
@@ -18,10 +19,8 @@ header .logo {
     color: #44d6e9;
     text-decoration: none;
     font-weight: 600;
-    width: 200px;
     display: flex;
     justify-content: center;
-    padding-left: 50px;
 }
 
 header .navigation {
@@ -126,11 +125,9 @@ header .search .fa-solid {
 
 .login {
     display: flex;
-    width: 200px;
     justify-content: center;
     align-items: center;
     gap: 8px;
-    padding-right: 50px;
 }
 
 

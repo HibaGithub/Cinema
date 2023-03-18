@@ -1,5 +1,6 @@
 /* footer css */
 footer {
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(4, auto);
     background-color: var(--primary-dark);

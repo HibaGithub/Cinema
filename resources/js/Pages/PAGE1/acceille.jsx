@@ -9,9 +9,8 @@ export default function  HomePage(){
     return(<>
           <Header />
           <ContentPage1 />
-       
           <Footer />
-     
+
         {/* <FlashCard/> */}
         
 
