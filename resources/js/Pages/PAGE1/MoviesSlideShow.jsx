@@ -30,7 +30,7 @@ import movie6 from '../../../css/image/slidshow/4.jpg'
 
 let movies = [
     {
-        title: "The Matrix Resurrections 3",
+        title: "The Matrix Resurrections 1",
         image: movie1,
     },
     {
