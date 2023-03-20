@@ -10,81 +10,96 @@ import "swiper/css/navigation";
 import { Navigation } from "swiper";
 
 // import images
-import movie1 from "../../../css/image/slide1.png";
-import movie2 from "../../../css/image/slide2.png";
-import movie3 from "../../../css/image/slide1.png";
-import movie4 from "../../../css/image/slide2.png";
-import movie5 from "../../../css/image/slide1.png";
-import movie6 from "../../../css/image/slide2.png";
-import movie7 from "../../../css/image/slide1.png";
-import movie8 from "../../../css/image/slide2.png";
-import movie9 from "../../../css/image/slide1.png";
+import movie1 from "../../../css/image/newmivie/A Night Without Tears (2023)_files.jpg";
+import movie2 from "../../../css/image/newmivie/From the Ashes (2023).jpg";
+import movie3 from "../../../css/image/newmivie/I'll Be There (2023).jpg";
+import movie4 from "../../../css/image/newmivie/Journey  (2023).jpg";
+import movie5 from "../../../css/image/newmivie/chess.jfif";
+import movie6 from "../../../css/image/newmivie/insidious.jfif";
+import movie7 from "../../../css/image/newmivie/teen wolf 2023.jpg";
+import movie8 from "../../../css/image/newmivie/The Hill (2023).jpg";
+import movie9 from "../../../css/image/newmivie/The Lost (2023)_files.jpg";
+import movie10 from "../../../css/image/newmivie/Welcome to Kashmir (2023)_files.jpg";
+import movie11 from "../../../css/image/newmivie/Listen Carefully (2023).jpg"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronCircleRight } from "@fortawesome/free-solid-svg-icons";
 
 let movies = [
     {
-        title: "Black Adam",
+        title: "A Night Without Tears",
         image: movie1,
-        category: "Sci-fi/Action",
-        duration: "2h 28m",
-        ageRating: "13+",
+        category: "Sci-fi/Horror",
+        duration: "2h 10m",
+        ageRating: "18+",
     },
     {
-        title: "Black Adam",
+        title: "From the Ashes",
         image: movie2,
-        category: "Sci-fi/Action",
-        duration: "2h 28m",
-        ageRating: "13+",
+        category: "Sci-fi/Drama",
+        duration: "1h 30m",
+        ageRating: "12+",
     },
     {
-        title: "Black Adam",
+        title: "I'll Be There",
         image: movie3,
-        category: "Sci-fi/Action",
-        duration: "2h 28m",
-        ageRating: "13+",
+        category: "Sci-fi/Comedy",
+        duration: "2h 00m",
+        ageRating: "10+",
     },
     {
-        title: "Black Adam",
+        title: " Journey",
         image: movie4,
-        category: "Sci-fi/Action",
+        category: "Sci-fi/Fantasy",
         duration: "2h 28m",
         ageRating: "13+",
     },
     {
-        title: "Black Adam",
+        title: "Chess",
         image: movie5,
         category: "Sci-fi/Action",
         duration: "2h 28m",
         ageRating: "13+",
     },
     {
-        title: "Black Adam",
+        title: "insidious",
         image: movie6,
-        category: "Sci-fi/Action",
-        duration: "2h 28m",
-        ageRating: "13+",
+        category: "Sci-fi/Thriller",
+        duration: "1h 30m",
+        ageRating: "18+",
     },
     {
-        title: "Black Adam",
+        title: "teen wolf",
         image: movie7,
-        category: "Sci-fi/Action",
-        duration: "2h 28m",
-        ageRating: "13+",
+        category: "Sci-fi/Thriller",
+        duration: "2h 15m",
+        ageRating: "18+",
     },
     {
-        title: "Black Adam",
+        title: "The Hill ",
         image: movie8,
         category: "Sci-fi/Action",
         duration: "2h 28m",
         ageRating: "13+",
     },
     {
-        title: "Black Adam",
+        title: "The Lost",
         image: movie9,
-        category: "Sci-fi/Action",
+        category: "Sci-fi/Fantasy",
         duration: "2h 28m",
         ageRating: "13+",
+    }, {
+        title: "welcome to kashmir",
+        image: movie10,
+        category: "Sci-fi/Mestery",
+        duration: "2h 28m",
+        ageRating: "13+",
+    },
+    {
+        title: "Listen Carefully ",
+        image: movie11,
+        category: "Sci-fi/Action",
+        duration: "1h 30m",
+        ageRating: "18+",
     },
 ];
 
@@ -95,10 +110,7 @@ export default function NewMovieSlide() {
             <Swiper
                 slidesPerView={2}
                 spaceBetween={10}
-                navigation={{
-                    nextEl: ".movies-next-button",
-                    prevEl: ".movies-prev-button",
-                }}
+                navigation={true}
                 breakpoints={{
                     768: {
                         slidesPerView: 2,

@@ -22,6 +22,11 @@ import { Autoplay, Pagination, Navigation } from "swiper";
 
 import movie1 from '../../../css/image/slide1.png'
 import movie2 from '../../../css/image/slide2.png'
+import movie3 from '../../../css/image/slidshow/1.jpg'
+import movie4 from '../../../css/image/slidshow/2.jpg'
+import movie5 from '../../../css/image/slidshow/3.jpg'
+import movie6 from '../../../css/image/slidshow/4.jpg'
+
 
 let movies = [
     {
@@ -31,6 +36,22 @@ let movies = [
     {
         title: "Titanic",
         image: movie2,
+    },
+    {
+        title: "The Pale Blue Eye ",
+        image: movie3,
+    },
+    {
+        title: "Vaincre ou mourir",
+        image: movie4,
+    },
+    {
+        title: "Tirailleurs",
+        image: movie5,
+    },
+    {
+        title: "Le Pire Voisin au monde ",
+        image: movie6,
     },
 ];
 export default function Slideshow() {
@@ -56,7 +77,7 @@ export default function Slideshow() {
                                 <p class="film-status">Now in cinema</p>
                             </div>
                             <div class="title">
-                                <h1>{ movie.title }</h1>
+                                <h1>{movie.title}</h1>
                             </div>
                             <div class="detail">
                                 <div class="categorie">
