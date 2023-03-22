@@ -10,16 +10,16 @@ export default function Header() {
             <ul class="navigation">
                 <li id="movies">
                     <Link href="/">Accueil</Link>
-                    <div class="menu-contant">
-                        <a href="#categorie">CATEGORY</a>
+                    {/* <div class="menu-contant">
+                        <Link href="/categorie">CATEGORY</Link>
 
-                        <a href="#Topmovie">TOP POPULARE MOVIES</a>
+                        <Link href="/top-movie">TOP POPULARE MOVIES</Link>
 
-                        <a href="#Newmovie">NEW MOVIES </a>
+                        <Link href="/new-movie">NEW MOVIES </Link>
 
-                    </div>
+                    </div> */}
                 </li>
-                <li><Link href="Horairs">Horairs</Link></li>
+                <li><Link href="/horaire">Horairs</Link></li>
                 <li><Link href="Tarif">Tarif</Link></li>
             </ul>
             <div class="search">

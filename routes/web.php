@@ -50,6 +50,24 @@ Route::get('/log', function () {
 Route::get('/sig', function () {
         return Inertia::render('login/signup');
 });
+// categorie
+Route::get('/categorie', function () {
+        return Inertia::render('PAGE1/pagecontente');
+});
+// new movie
+Route::get('/new-movie', function () {
+        return Inertia::render('PAGE1/newmovieslide');
+});
 
+// top movie
+Route::get('/top-movie', function () {
+        return Inertia::render('PAGE1/movieslide');
+});
+
+// horaire page
+Route::get('/horaire', function () {
+
+        return Inertia::render('PAGE2/Horaire');
+});
 
 require __DIR__.'/auth.php';
