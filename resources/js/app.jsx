@@ -3,6 +3,7 @@ import '../css/app.css';
  import '../css/loginsignup.css';
 import '../css/header.css';
 import '../css/footer.css';
+import '../css/movielist.css'
 // slidetopmovie css
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
