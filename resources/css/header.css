@@ -1,3 +1,13 @@
+:root {
+    --primary: #080e2c;
+    --primary-dark: #040716;
+    --primary-light: #101b56;
+    --secondary: #44d6e9;
+    --secondary-dark: #2dd1e6;
+    --secondary-light: #5bdbec;
+}
+
+
 /* header css */
 header {
     position: absolute;
@@ -30,7 +40,7 @@ header .navigation {
     flex: 1.5;
     height: 100%;
     margin-top: 0;
-        margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 header .navigation li {
@@ -78,7 +88,7 @@ header .navigation li a:hover {
     background-color: var(--primary-light);
 }
 
-.navigation>#movies:hover .menu-contant {
+.navigation > #movies:hover .menu-contant {
     transform: scaleY(100%);
 }
 
@@ -123,20 +133,42 @@ header .search .fa-solid {
     color: #fff;
 }
 
-.login {
+.profile {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 8px;
+    position: relative;
+    height: 100%;
 }
 
-
-.login>*:first-child {
+.profile > #icon-profile {
     font-size: 30px;
     color: #fff;
 }
 
-.login>*:first-child:hover {
-    font-size: 35px;
-    color: rgb(19, 211, 224);
+.profile > p {
+    color: #fff;
+}
+
+.profile > .profile-menu{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: max-content;
+    padding: 16px;
+    border-radius: 5px;
+    position: absolute;
+    top: calc(100% - 5px);
+    background-color: var(--primary-light);
+}
+
+.profile:hover .profile-menu{
+    display: flex;
+}
+
+.profile > #icon-profile:hover {
+    font-size: 30px;
+    color: var(--secondary-dark);
 }

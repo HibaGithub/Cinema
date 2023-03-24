@@ -1,16 +1,17 @@
 /* login sugnup */
 .logIn {
-    height: 100vh;
+    height: 100%;
+    width: 100%;
     background-image: url(./image/imagelogin/2.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     opacity: 0.8;
-    width: 100%;
 }
 
 .SignUp {
-    height: 100vh;
+    height: 100%;
+    width: 100%;
     background-image: url(./image/imagelogin/3.png);
     background-position: center;
     background-size: cover;
@@ -33,7 +34,6 @@
 
 .login-info button,
 .signUp-info button {
-    width: 85%;
     color: #fff;
     font-size: 17px;
     transition: all 0.5s ease-in-out;
@@ -57,10 +57,7 @@
     border-radius: 50px;
     color: rgba(208, 206, 206, 0.664);
     /* border: #101d46 1px solid; */
-    padding: 0px 7px;
     z-index: 4526;
-
-    margin-top: 20px;
     /* background-color: #fff; */
     /* top: 12px; */
 }
@@ -131,13 +128,13 @@
 
 @media screen and (max-width: 992px) and (min-width: 768px) {
     .signUp-info {
-        width: 70% !important;
+        width: 50% !important;
     }
 }
 
 @media screen and (max-width: 767px) and (min-width: 600px) {
     .signUp-info {
-        width: 75% !important;
+        width: 60% !important;
     }
 }
 
