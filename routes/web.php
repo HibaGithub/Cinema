@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FilmsController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -65,9 +66,6 @@ Route::get('/top-movie', function () {
 });
 
 // horaire page
-Route::get('/horaire', function () {
-
-        return Inertia::render('PAGE2/Horaire');
-});
+Route::get('/horaire', [FilmsController::class,'index']);
 
 require __DIR__.'/auth.php';

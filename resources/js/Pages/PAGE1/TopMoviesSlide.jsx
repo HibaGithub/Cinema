@@ -11,7 +11,7 @@ import { Navigation } from "swiper";
 
 // import images
 import movie1 from "../../../css/image/topmovie/acream.jfif";
-import movie2 from "../../../css/image/topmovie/Amsterdam_(2022_film).jpg";
+import movie2 from "../../../css/image/topmovie/Amsterdam.jpg";
 import movie3 from "../../../css/image/topmovie/lely lely crocodile.jfif";
 import movie4 from "../../../css/image/topmovie/black-adam.jpg";
 import movie5 from "../../../css/image/topmovie/call jane.jpg";
