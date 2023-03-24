@@ -40,14 +40,14 @@ use Inertia\Inertia;
 // });
 Route::get('/',function(){
 
-        return Inertia::render('PAGE1/acceille');
+        return Inertia::render('PAGE1/Accueil');
  });
 //  login
-Route::get('/log', function () {
+Route::get('/login', function () {
         return Inertia::render('login/log-in');
 });
 //  sigup
-Route::get('/sig', function () {
+Route::get('/sigup', function () {
         return Inertia::render('login/signup');
 });
 // categorie

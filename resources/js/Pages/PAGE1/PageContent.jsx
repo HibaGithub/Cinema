@@ -1,10 +1,10 @@
 import React from "react";
 import Slideshow from "./MoviesSlideShow";
-import Newmovie from "./newmovieslide";
-import TopMovieSlide from "./movieslide";
+import NewMovieSlide from "./NewMoviesSlide";
+import TopMovieSlide from "./TopMoviesSlide";
 
 
-export default function ContentPage1() {
+export default function ContentPage() {
     return (
         <>
             {/* <!-- slidshow --> */}
@@ -125,7 +125,7 @@ export default function ContentPage1() {
             <TopMovieSlide />
             
             {/* <!-- new movie --> */}
-            <Newmovie />
+            <NewMovieSlide />
         </>
     );
 }

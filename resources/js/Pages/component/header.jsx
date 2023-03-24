@@ -28,7 +28,7 @@ export default function Header() {
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </div>
             </div>
-            <Link href="/log">
+            <Link href="/login">
                 <div class="login">
                     <i id="icon-login" class="fa-solid fa-circle-user"></i>
                 </div>
