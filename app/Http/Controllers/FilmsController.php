@@ -11,10 +11,14 @@ class FilmsController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
-    {
-        $films=Films::find();
-        return Inertia::render('PAGE2/Horaire',compact("films"));
+    public function index(Films $films)
+   
+    {   info($films);
+        return Inertia::render('PAGE2/Horaire', [
+            'films' => $films
+          
+        ]);
+       
     }
 
     /**
