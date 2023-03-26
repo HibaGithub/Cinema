@@ -1,8 +1,12 @@
 <?php
 
 use App\Http\Controllers\FilmsController;
+use App\Http\Controllers\Auth\AuthenticatedSessionController;
+use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\ProfileController;
+use GuzzleHttp\Promise\Create;
 use Illuminate\Foundation\Application;
+use Illuminate\Session\Middleware\AuthenticateSession;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -39,18 +43,21 @@ use Inertia\Inertia;
 // Route::get('/post',function(){
 // return Inertia::render('posts/indexing');
 // });
-Route::get('/',function(){
+Route::get('/', function () {
 
         return Inertia::render('PAGE1/Accueil');
- });
+});
 //  login
-Route::get('/login', function () {
-        return Inertia::render('login/log-in');
-});
+Route::get('/login', [AuthenticatedSessionController::class, 'create']);
+Route::post('/login', [AuthenticatedSessionController::class, 'store']);
+
 //  sigup
-Route::get('/sigup', function () {
-        return Inertia::render('login/signup');
-});
+Route::get('/signup', [RegisteredUserController::class, 'create']);
+Route::post('/signup', [RegisteredUserController::class, 'store']);
+
+// logout
+Route::get('/logout', [AuthenticatedSessionController::class, 'destroy']);
+
 // categorie
 Route::get('/categorie', function () {
         return Inertia::render('PAGE1/pagecontente');
