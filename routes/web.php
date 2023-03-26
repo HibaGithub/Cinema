@@ -66,6 +66,8 @@ Route::get('/top-movie', function () {
 });
 
 // horaire page
-Route::get('/horaire', [FilmsController::class,'index']);
-
+ Route::get('/horaire', [FilmsController::class, 'index']);
+// Route::get('/horaire', function(){
+//         return Inertia::render('PAGE2/Horaire');
+// });
 require __DIR__.'/auth.php';

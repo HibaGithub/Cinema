@@ -11,13 +11,11 @@ class FilmsController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index(Films $films)
+    public function index()
    
-    {   info($films);
-        return Inertia::render('PAGE2/Horaire', [
-            'films' => $films
-          
-        ]);
+    {
+        $Films=Films::all();
+        return inertia::render('PAGE2/Horaire',['films'=> $Films]);
        
     }
 
@@ -40,9 +38,9 @@ class FilmsController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show()
     {
-        //
+        // 
     }
 
     /**
