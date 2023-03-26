@@ -49,11 +49,14 @@ Route::get('/', function () {
 //  login
 Route::get('/login', [AuthenticatedSessionController::class, 'create']);
 Route::post('/login', [AuthenticatedSessionController::class, 'store']);
+
 //  sigup
 Route::get('/signup', [RegisteredUserController::class, 'create']);
 Route::post('/signup', [RegisteredUserController::class, 'store']);
+
 // logout
 Route::get('/logout', [AuthenticatedSessionController::class, 'destroy']);
+
 // categorie
 Route::get('/categorie', function () {
         return Inertia::render('PAGE1/pagecontente');
