@@ -13,13 +13,12 @@ return new class extends Migration
     {
         Schema::create('films', function (Blueprint $table) {
             $table->id()->autoIncrement();
-            $table->string('image');
+            $table->binary('image');
             $table->string('titre');
             $table->string('categorie');
             $table->integer('age');
-            $table->decimal('duration',6,0);
+            $table->decimal('duration', 6, 0);
             $table->date('date-edition');
-
         });
     }
 

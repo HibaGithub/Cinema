@@ -1,10 +1,11 @@
 import Header from "../component/header";
 import Footer from "../component/footer";
 import MovieList from "./MovieList";
-export default function Horaire() {
+import { Head } from "@inertiajs/react";
+export default function Horaire({films}) {
     return (<>
         <Header />
-        <MovieList />
+        <MovieList data={films} />
         <Footer/>
 
     

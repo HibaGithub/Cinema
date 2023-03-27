@@ -1,19 +1,15 @@
-import React, { Fragment, useRef, useState } from "react";
- import { Head } from "@inertiajs/react";
-// import Layout from "@/Layouts/layout";
-
-export default function MovieList({films}) {
+import React from "react";
+export default function MovieList({data}) {
+    console.log(data)
     return (
-
-
-    
-        <Layout>
-            <Head title="ovieList" />
+        
+        <div className="container-movie"> { 
+        data.map((film)=>
             <section class="container">
                 <div class="box-container">
                     <div class="box">
                         <div class="image">
-                            <img src='../../../css/image/slide1.png' alt="" />
+                            <img src={film.image} alt="image" />
                             <div class="buy">
                                 <i class="fa-solid fa-ticket"></i>
                                 <a href="#">Buy ticket</a>
@@ -21,19 +17,19 @@ export default function MovieList({films}) {
                         </div>
                         <div class="contant">
                             <div class="title">
-                                <h2>films.titre</h2>
+                                <h2>{film.titre}</h2>
                                 <span>VF</span>
                                 <span>ST</span>
                             </div>
                             <div class="info">
                                 <div><i class="fa-solid fa-film"></i>
-                                    <span> Sci-fi/Action </span>
+                                    <span> Sci-fi/{film.categorie} </span>
                                 </div>
                                 <div><i class="fa-regular fa-clock"></i>
                                     <span> 2h 28 min</span>
                                 </div>
                                 <div><i class="fa-regular fa-user"></i>
-                                    <span>+18</span>
+                                    <span>+{film.age}</span>
                                 </div>
                             </div>
                             <div class="salle1">
@@ -52,10 +48,7 @@ export default function MovieList({films}) {
                     </div>
                 </div>
                 </section>
-            </Layout>
-           
-
-
-
-    )
-}
+                )}</div>
+                  )
+                }
+                  
