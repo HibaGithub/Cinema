@@ -1,4 +1,10 @@
 import React from "react";
+// import movie1 from "../../../css/image/newmivie/A Night Without Tears (2023)_files.jpg";
+// import movie2 from "../../../css/image/newmivie/From the Ashes (2023).jpg";
+// import movie3 from "../../../css/image/newmivie/I'll Be There (2023).jpg";
+// import movie4 from "../../../css/image/newmivie/Journey  (2023).jpg";
+// import movie5 from "../../../css/image/newmivie/chess.jfif";
+
 export default function MovieList({data}) {
     console.log(data)
     return (
@@ -9,7 +15,7 @@ export default function MovieList({data}) {
                 <div class="box-container">
                     <div class="box">
                         <div class="image">
-                            <img src={film.image} alt="image" />
+                            <img src={(`../../../ css / image / allimage / ${film.image}`)}alt="image" />
                             <div class="buy">
                                 <i class="fa-solid fa-ticket"></i>
                                 <a href="#">Buy ticket</a>
