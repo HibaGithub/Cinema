@@ -79,7 +79,7 @@
 
 .title {
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
     width: 100%;
     height: max-content;
@@ -106,7 +106,7 @@
 
 .info {
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     gap: 30px;
     align-items: center;
     color: white;
@@ -124,7 +124,7 @@
 .salle2 {
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: flex-start;
 
 
