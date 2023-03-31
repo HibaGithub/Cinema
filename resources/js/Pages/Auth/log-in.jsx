@@ -85,7 +85,7 @@ export default function SignUp() {
                         )}
                     </div>
                     <div className="flex flex-col gap-2">
-                        <button className="btn main-bg mt-3 p-2" type="submit">
+                        <button className="btn main-bg mt-3 p-3" type="submit">
                             Sign In
                         </button>
                         <Link href="/forgetPassword" class="forget-pass text-white text-right">

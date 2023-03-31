@@ -3,9 +3,11 @@
     --poster-space: 18px;
     --poster-per-view: 5;
     --primary: #080e2c;
+    --primary-hs: 230, 69%;
     --primary-dark: #040716;
     --primary-light: #101b56;
     --secondary: #44d6e9;
+    --secondary-hs: 187, 79%;
     --secondary-dark: #2dd1e6;
     --secondary-light: #5bdbec;
     --font: "open", sans-serif;
@@ -51,9 +53,9 @@
 
 .login-info button,
 .signUp-info button {
-    color: #fff;
-    font-size: 17px;
-    transition: all 0.5s ease-in-out;
+    color: var(--primary);
+    font-size: 18px;
+    transition: all 0.3s ease-in-out;
     /* background-color: #162162; */
 }
 
@@ -62,7 +64,7 @@
 .mybtn:hover {
     cursor: pointer;
     color: #fff;
-    background-color: #040b30;
+    background-color: hsl(var(--secondary-hs), 45%);
     /* position: relative; */
 }
 
@@ -98,8 +100,9 @@
 }
 
 .main-bg {
-    background-color: #101d46;
+    background-color: var(--secondary-dark);
 }
+
 
 .font-style {
     font-size: 18px;

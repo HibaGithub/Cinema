@@ -29,7 +29,7 @@ export default function SignUp() {
                     >
                         <FontAwesomeIcon icon={faArrowLeft} /> Back to home
                     </Link>
-                    <h2 class="text-center mb-5 fw-bold text-5xl">Sign Up</h2>
+                    <h2 class="text-center my-5 fw-bold text-5xl">Sign Up</h2>
                     <div className="input-container text-start space-y-3">
                         <input
                             type="text"
@@ -86,8 +86,8 @@ export default function SignUp() {
                             }
                         />
                     </div>
-                    <button class="btn main-bg mt-3 p-2" type="submit">
-                        Sign In
+                    <button class="btn main-bg mt-3 p-3" type="submit">
+                        Create account
                     </button>
                     <div class="mt-4">
                         <span class="font-style">You have an account? </span>

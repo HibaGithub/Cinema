@@ -3,21 +3,29 @@ import {
     faExclamationCircle,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Link, useForm } from "@inertiajs/react";
+import { Head, Link, useForm } from "@inertiajs/react";
 import React, { useState } from "react";
 
-export default function ForgetPassword() {
+export default function ForgetPassword({ status }) {
     const { data, setData, processing, errors, post } = useForm({
-        email:""
+        email: "",
     });
-
 
     const handelSubmit = (e) => {
         e.preventDefault();
-        post('forgetPassword', data);
+        post("forgetPassword", data);
     };
     return (
-        <section className="ForgetPassword">
+        <section className="ForgetPassword relative">
+            {status ? (
+                <div
+                    class="absolute left-1/2 -translate-x-1/2 w-full max-w-max text-center p-4 mt-3 text-base text-white font-semibold rounded-lg bg-green-500"
+                    role="alert"
+                >
+                    <span class="font-medium">Email Sent!</span> We've sent an
+                    email with reset link
+                </div>
+            ) : null}
             <div className="d-flex justify-content-center align-items-center h-screen">
                 <form
                     onSubmit={handelSubmit}
@@ -30,7 +38,9 @@ export default function ForgetPassword() {
                     >
                         <FontAwesomeIcon icon={faArrowLeft} /> Back to home
                     </Link>
-                    <h2 className="text-center mb-2 fw-bold text-xl">We Will send a reset link to this email</h2>
+                    <h2 className="text-center mb-3 fw-bold text-3xl mt-4">
+                        We Will send a reset link to this email
+                    </h2>
                     <div className="input-container text-start space-y-3">
                         <input
                             type="email"
@@ -39,9 +49,9 @@ export default function ForgetPassword() {
                             name="email"
                             value={data.email}
                             placeholder="Email"
-                            onChange={(e) => setData('email', e.target.value)}
+                            onChange={(e) => setData("email", e.target.value)}
                         />
-                        {errors.email && (
+                        {errors.email ?(
                             <div className="warning-messsage">
                                 <FontAwesomeIcon
                                     icon={faExclamationCircle}
@@ -49,12 +59,12 @@ export default function ForgetPassword() {
                                 />
                                 {errors.email}
                             </div>
-                        )}
+                        ) : null}
                     </div>
-                   
+
                     <div className="flex flex-col gap-2">
-                        <button className="btn main-bg mt-3 p-2" type="submit">
-                            Apply
+                        <button className="btn main-bg mt-3 p-3" type="submit">
+                        Send Reset Link
                         </button>
                     </div>
                 </form>
