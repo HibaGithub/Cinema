@@ -2,11 +2,9 @@
 
 use App\Http\Controllers\FilmsController;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
+use App\Http\Controllers\Auth\NewPasswordController;
+use App\Http\Controllers\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Auth\RegisteredUserController;
-use App\Http\Controllers\ProfileController;
-use GuzzleHttp\Promise\Create;
-use Illuminate\Foundation\Application;
-use Illuminate\Session\Middleware\AuthenticateSession;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -57,6 +55,13 @@ Route::post('/signup', [RegisteredUserController::class, 'store']);
 
 // logout
 Route::get('/logout', [AuthenticatedSessionController::class, 'destroy']);
+
+// forget password
+Route::get('/forgetPassword', [PasswordResetLinkController::class, 'create'])->middleware('guest');
+Route::post('/forgetPassword', [PasswordResetLinkController::class, 'store'])->middleware('guest');
+
+Route::get('/reset-password/{token}', [NewPasswordController::class, 'create']);
+Route::post('/reset-password', [NewPasswordController::class, 'store']);
 
 // categorie
 Route::get('/categorie', function () {

@@ -1,4 +1,7 @@
-import { faArrowLeft, faExclamationCircle } from "@fortawesome/free-solid-svg-icons";
+import {
+    faArrowLeft,
+    faExclamationCircle,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link, useForm } from "@inertiajs/react";
 import React, { useState } from "react";
@@ -14,7 +17,7 @@ export default function SignUp() {
         post("login", data);
     };
     return (
-        <section class="SignUp">
+        <section class="Login">
             <div class="d-flex justify-content-center align-items-center h-screen">
                 <form
                     onSubmit={handelSubmit}
@@ -30,7 +33,11 @@ export default function SignUp() {
                     <h2 class="text-center mb-5 fw-bold text-5xl">Login</h2>
 
                     {errors.email && !errors.password && (
-                        <div className="warning-messsage"><FontAwesomeIcon icon={faExclamationCircle} className='mr-2' />
+                        <div className="warning-messsage">
+                            <FontAwesomeIcon
+                                icon={faExclamationCircle}
+                                className="mr-2"
+                            />
                             Your email and password combination is incorrect.
                             Please try again
                         </div>
@@ -44,8 +51,14 @@ export default function SignUp() {
                             placeholder="Email"
                             onChange={(e) => setData("email", e.target.value)}
                         />
-                        {(errors.email && errors.password )&& (
-                            <div className="warning-messsage"><FontAwesomeIcon icon={faExclamationCircle} className='mr-2' />{ errors.email }</div>
+                        {errors.email && errors.password && (
+                            <div className="warning-messsage">
+                                <FontAwesomeIcon
+                                    icon={faExclamationCircle}
+                                    className="mr-2"
+                                />
+                                {errors.email}
+                            </div>
                         )}
                     </div>
                     <div className="input-container text-start space-y-3">
@@ -62,14 +75,23 @@ export default function SignUp() {
                             }
                         />
                         {errors.password && (
-                            <div className="warning-messsage"><FontAwesomeIcon icon={faExclamationCircle} className='mr-2' />
+                            <div className="warning-messsage">
+                                <FontAwesomeIcon
+                                    icon={faExclamationCircle}
+                                    className="mr-2"
+                                />
                                 {errors.password}
                             </div>
                         )}
                     </div>
-                    <button className="btn main-bg mt-3 p-2" type="submit">
-                        Sign In
-                    </button>
+                    <div className="flex flex-col gap-2">
+                        <button className="btn main-bg mt-3 p-2" type="submit">
+                            Sign In
+                        </button>
+                        <Link href="/forgetPassword" class="forget-pass text-white text-right">
+                            Forget Password?
+                        </Link>
+                    </div>
                     <div className="mt-4 mb-2 w-75 m-auto">
                         <span className="font-style">
                             Don’t have an account?

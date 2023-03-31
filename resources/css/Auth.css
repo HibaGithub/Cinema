@@ -1,5 +1,22 @@
-/* login sugnup */
-.logIn {
+:root {
+    --poster-width: 230px;
+    --poster-space: 18px;
+    --poster-per-view: 5;
+    --primary: #080e2c;
+    --primary-dark: #040716;
+    --primary-light: #101b56;
+    --secondary: #44d6e9;
+    --secondary-dark: #2dd1e6;
+    --secondary-light: #5bdbec;
+    --font: "open", sans-serif;
+    --font-light: 300;
+    --font-regular: 500;
+    --font-medium: 600;
+    --font-bold: 700;
+}
+
+/* Authentcation */
+.Login {
     height: 100%;
     width: 100%;
     background-image: url(./image/imagelogin/2.png);
@@ -9,7 +26,7 @@
     opacity: 0.8;
 }
 
-.SignUp {
+.SignUp, .ForgetPassword {
     height: 100%;
     width: 100%;
     background-image: url(./image/imagelogin/3.png);
@@ -126,6 +143,10 @@
     display: none;
 }
 
+.forget-pass:hover{
+    color: var(--secondary);
+}
+
 @media screen and (max-width: 992px) and (min-width: 768px) {
     .signUp-info {
         width: 50% !important;
@@ -143,3 +164,4 @@
         width: 80% !important;
     }
 }
+
