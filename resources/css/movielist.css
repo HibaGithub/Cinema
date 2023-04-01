@@ -1,24 +1,24 @@
 .container-movie{
-    margin-top:12em ;
+
     width: 100%;
     display: grid;
-        align-items: center;
-        justify-content: center;
+    align-items: center;
+    justify-content: center;
 }
 .container {
     margin:1em;
-    /* width: 100%; */
+    width: 100%;
     /* margin-top:12em ; */
-    display: flex;
+    /* display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
 }
 
 
 .container .box-container {
     display: grid;
     /* row-gap: 3em; */
-    width: 100%;
+    /* width: 100%; */
 }
 
 .container .box-container .box {
@@ -27,6 +27,7 @@
     display: flex;
     gap: 60px;
     padding: 1em;
+    width: 100%;
     border-radius: 22px;
 }
 

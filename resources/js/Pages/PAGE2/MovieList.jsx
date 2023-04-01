@@ -2,6 +2,12 @@ import React, { useRef, useState } from "react";
 
 
 export default function MovieList({data}) {
+    
+    // const fillter = (button)=>{
+    //    const filterdata = document.getElementsByClassName('container')
+    // .fillter(document.getElementsByClassName('container') =>
+    //  document.getElementsByClassName('container').length(2)===button);
+    // } 
     console.log(data)
     return (
         <>

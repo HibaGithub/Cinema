@@ -4,6 +4,7 @@ import '../css/app.css';
 import '../css/header.css';
 import '../css/footer.css';
 import '../css/movielist.css'
+import '../css/DysBar.css'
 // slidetopmovie css
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";

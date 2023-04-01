@@ -77,4 +77,5 @@ Route::get('/top-movie', function () {
 // Route::get('/horaire', function(){
 //         return Inertia::render('PAGE2/Horaire');
 // });
+
 require __DIR__.'/auth.php';
