@@ -10,12 +10,6 @@ export default function  HomePage(){
           <Header />
           <ContentPage />
           <Footer />
-
-        {/* <FlashCard/> */}
-        
-
-
-         </>
-    
-    )
+        </>
+    );
 }

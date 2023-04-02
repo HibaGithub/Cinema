@@ -1,22 +1,23 @@
-import { faArrowLeft, faExclamationCircle } from "@fortawesome/free-solid-svg-icons";
+import {
+    faArrowLeft,
+    faExclamationCircle,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link, useForm } from "@inertiajs/react";
 import React, { useState } from "react";
 
 export default function SignUp() {
     const { data, setData, post, errors } = useForm({
-        name: "",
         email: "",
         password: "",
-        password_confirmation: "",
     });
 
     const handelSubmit = (e) => {
         e.preventDefault();
-        post("signup", data);
+        post("login", data);
     };
     return (
-        <section class="SignUp">
+        <section class="Login">
             <div class="d-flex justify-content-center align-items-center h-screen">
                 <form
                     onSubmit={handelSubmit}
@@ -29,20 +30,18 @@ export default function SignUp() {
                     >
                         <FontAwesomeIcon icon={faArrowLeft} /> Back to home
                     </Link>
-                    <h2 class="text-center mb-5 fw-bold text-5xl">Sign Up</h2>
-                    <div className="input-container text-start space-y-3">
-                        <input
-                            type="text"
-                            class="form-control rounded-md h-12"
-                            id="name"
-                            value={data.name}
-                            placeholder="Username"
-                            onChange={(e) => setData("name", e.target.value)}
-                        />
-                        {errors.name && (
-                            <div className="warning-messsage"><FontAwesomeIcon icon={faExclamationCircle} className='mr-2' />{errors.name}</div>
-                        )}
-                    </div>
+                    <h2 class="text-center mb-5 fw-bold text-5xl">Login</h2>
+
+                    {errors.email && !errors.password && (
+                        <div className="warning-messsage">
+                            <FontAwesomeIcon
+                                icon={faExclamationCircle}
+                                className="mr-2"
+                            />
+                            Your email and password combination is incorrect.
+                            Please try again
+                        </div>
+                    )}
                     <div className="input-container text-start space-y-3">
                         <input
                             type="email"
@@ -52,8 +51,14 @@ export default function SignUp() {
                             placeholder="Email"
                             onChange={(e) => setData("email", e.target.value)}
                         />
-                        {errors.email && (
-                            <div className="warning-messsage"><FontAwesomeIcon icon={faExclamationCircle} className='mr-2' />{errors.email}</div>
+                        {errors.email && errors.password && (
+                            <div className="warning-messsage">
+                                <FontAwesomeIcon
+                                    icon={faExclamationCircle}
+                                    className="mr-2"
+                                />
+                                {errors.email}
+                            </div>
                         )}
                     </div>
                     <div className="input-container text-start space-y-3">
@@ -70,29 +75,30 @@ export default function SignUp() {
                             }
                         />
                         {errors.password && (
-                            <div className="warning-messsage"><FontAwesomeIcon icon={faExclamationCircle} className='mr-2' />{errors.password}</div>
+                            <div className="warning-messsage">
+                                <FontAwesomeIcon
+                                    icon={faExclamationCircle}
+                                    className="mr-2"
+                                />
+                                {errors.password}
+                            </div>
                         )}
                     </div>
-                    <div className="input-container text-start">
-                        <input
-                            type="password"
-                            class="form-control rounded-md h-12"
-                            id="password_confirmation"
-                            name="password_confirmation"
-                            autocomplete="current-password"
-                            placeholder="Comfirm password"
-                            onChange={(e) =>
-                                setData("password_confirmation", e.target.value)
-                            }
-                        />
+                    <div className="flex flex-col gap-2">
+                        <button className="btn main-bg mt-3 p-3" type="submit">
+                            Sign In
+                        </button>
+                        <Link href="/forgetPassword" class="forget-pass text-white text-right">
+                            Forget Password?
+                        </Link>
                     </div>
-                    <button class="btn main-bg mt-3 p-2" type="submit">
-                        Sign In
-                    </button>
-                    <div class="mt-4">
-                        <span class="font-style">You have an account? </span>
-                        <Link href="/login" className="text-secondary-light">
-                            login
+                    <div className="mt-4 mb-2 w-75 m-auto">
+                        <span className="font-style">
+                            Don’t have an account?
+                        </span>
+                        <br />
+                        <Link href="/signup" class="main-color sign-link">
+                            Sign Up Now!
                         </Link>
                     </div>
                 </form>

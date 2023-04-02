@@ -5,13 +5,15 @@ import React, { useState } from "react";
 
 export default function SignUp() {
     const { data, setData, post, errors } = useForm({
+        name: "",
         email: "",
         password: "",
+        password_confirmation: "",
     });
 
     const handelSubmit = (e) => {
         e.preventDefault();
-        post("login", data);
+        post("signup", data);
     };
     return (
         <section class="SignUp">
@@ -27,14 +29,20 @@ export default function SignUp() {
                     >
                         <FontAwesomeIcon icon={faArrowLeft} /> Back to home
                     </Link>
-                    <h2 class="text-center mb-5 fw-bold text-5xl">Login</h2>
-
-                    {errors.email && !errors.password && (
-                        <div className="warning-messsage"><FontAwesomeIcon icon={faExclamationCircle} className='mr-2' />
-                            Your email and password combination is incorrect.
-                            Please try again
-                        </div>
-                    )}
+                    <h2 class="text-center my-5 fw-bold text-5xl">Sign Up</h2>
+                    <div className="input-container text-start space-y-3">
+                        <input
+                            type="text"
+                            class="form-control rounded-md h-12"
+                            id="name"
+                            value={data.name}
+                            placeholder="Username"
+                            onChange={(e) => setData("name", e.target.value)}
+                        />
+                        {errors.name && (
+                            <div className="warning-messsage"><FontAwesomeIcon icon={faExclamationCircle} className='mr-2' />{errors.name}</div>
+                        )}
+                    </div>
                     <div className="input-container text-start space-y-3">
                         <input
                             type="email"
@@ -44,8 +52,8 @@ export default function SignUp() {
                             placeholder="Email"
                             onChange={(e) => setData("email", e.target.value)}
                         />
-                        {(errors.email && errors.password )&& (
-                            <div className="warning-messsage"><FontAwesomeIcon icon={faExclamationCircle} className='mr-2' />{ errors.email }</div>
+                        {errors.email && (
+                            <div className="warning-messsage"><FontAwesomeIcon icon={faExclamationCircle} className='mr-2' />{errors.email}</div>
                         )}
                     </div>
                     <div className="input-container text-start space-y-3">
@@ -62,21 +70,29 @@ export default function SignUp() {
                             }
                         />
                         {errors.password && (
-                            <div className="warning-messsage"><FontAwesomeIcon icon={faExclamationCircle} className='mr-2' />
-                                {errors.password}
-                            </div>
+                            <div className="warning-messsage"><FontAwesomeIcon icon={faExclamationCircle} className='mr-2' />{errors.password}</div>
                         )}
                     </div>
-                    <button className="btn main-bg mt-3 p-2" type="submit">
-                        Sign In
+                    <div className="input-container text-start">
+                        <input
+                            type="password"
+                            class="form-control rounded-md h-12"
+                            id="password_confirmation"
+                            name="password_confirmation"
+                            autocomplete="current-password"
+                            placeholder="Comfirm password"
+                            onChange={(e) =>
+                                setData("password_confirmation", e.target.value)
+                            }
+                        />
+                    </div>
+                    <button class="btn main-bg mt-3 p-3" type="submit">
+                        Create account
                     </button>
-                    <div className="mt-4 mb-2 w-75 m-auto">
-                        <span className="font-style">
-                            Don’t have an account?
-                        </span>
-                        <br />
-                        <Link href="/signup" class="main-color sign-link">
-                            Sign Up Now!
+                    <div class="mt-4">
+                        <span class="font-style">You have an account? </span>
+                        <Link href="/login" className="text-secondary-light">
+                            login
                         </Link>
                     </div>
                 </form>

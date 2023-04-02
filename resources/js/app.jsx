@@ -1,6 +1,6 @@
 import './bootstrap';
 import '../css/app.css';
- import '../css/loginsignup.css';
+ import '../css/Auth.css';
 import '../css/header.css';
 import '../css/footer.css';
 import '../css/movielist.css'

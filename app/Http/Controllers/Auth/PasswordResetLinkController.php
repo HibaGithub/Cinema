@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Password;
@@ -17,7 +18,7 @@ class PasswordResetLinkController extends Controller
      */
     public function create(): Response
     {
-        return Inertia::render('Auth/ForgotPassword', [
+        return Inertia::render('Auth/ForgetPassword', [
             'status' => session('status'),
         ]);
     }
@@ -29,8 +30,9 @@ class PasswordResetLinkController extends Controller
      */
     public function store(Request $request): RedirectResponse
     {
+        info($request);
         $request->validate([
-            'email' => 'required|email',
+            'email' => 'required|email|exists:App\Models\User',
         ]);
 
         // We will send the password reset link to this user. Once we have attempted
@@ -39,6 +41,8 @@ class PasswordResetLinkController extends Controller
         $status = Password::sendResetLink(
             $request->only('email')
         );
+
+        info($status);
 
         if ($status == Password::RESET_LINK_SENT) {
             return back()->with('status', __($status));

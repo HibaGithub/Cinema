@@ -1,5 +1,24 @@
-/* login sugnup */
-.logIn {
+:root {
+    --poster-width: 230px;
+    --poster-space: 18px;
+    --poster-per-view: 5;
+    --primary: #080e2c;
+    --primary-hs: 230, 69%;
+    --primary-dark: #040716;
+    --primary-light: #101b56;
+    --secondary: #44d6e9;
+    --secondary-hs: 187, 79%;
+    --secondary-dark: #2dd1e6;
+    --secondary-light: #5bdbec;
+    --font: "open", sans-serif;
+    --font-light: 300;
+    --font-regular: 500;
+    --font-medium: 600;
+    --font-bold: 700;
+}
+
+/* Authentcation */
+.Login {
     height: 100%;
     width: 100%;
     background-image: url(./image/imagelogin/2.png);
@@ -9,7 +28,7 @@
     opacity: 0.8;
 }
 
-.SignUp {
+.SignUp, .ForgetPassword {
     height: 100%;
     width: 100%;
     background-image: url(./image/imagelogin/3.png);
@@ -34,9 +53,9 @@
 
 .login-info button,
 .signUp-info button {
-    color: #fff;
-    font-size: 17px;
-    transition: all 0.5s ease-in-out;
+    color: var(--primary);
+    font-size: 18px;
+    transition: all 0.3s ease-in-out;
     /* background-color: #162162; */
 }
 
@@ -45,7 +64,7 @@
 .mybtn:hover {
     cursor: pointer;
     color: #fff;
-    background-color: #040b30;
+    background-color: hsl(var(--secondary-hs), 45%);
     /* position: relative; */
 }
 
@@ -81,8 +100,9 @@
 }
 
 .main-bg {
-    background-color: #101d46;
+    background-color: var(--secondary-dark);
 }
+
 
 .font-style {
     font-size: 18px;
@@ -126,6 +146,10 @@
     display: none;
 }
 
+.forget-pass:hover{
+    color: var(--secondary);
+}
+
 @media screen and (max-width: 992px) and (min-width: 768px) {
     .signUp-info {
         width: 50% !important;
@@ -143,3 +167,4 @@
         width: 80% !important;
     }
 }
+
