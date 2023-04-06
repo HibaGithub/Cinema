@@ -25,7 +25,7 @@ export default function Header() {
                     <Link href="/horaire">Horairs</Link>
                 </li>
                 <li>
-                    <Link href="Tarif">Tarif</Link>
+                    <Link href="/tarif">Tarif</Link>
                 </li>
             </ul>
             <div class="search">

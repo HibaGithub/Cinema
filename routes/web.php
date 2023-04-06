@@ -5,6 +5,7 @@ use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\Auth\NewPasswordController;
 use App\Http\Controllers\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Auth\RegisteredUserController;
+use App\Http\Controllers\FormcontactController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -79,8 +80,12 @@ Route::get('/top-movie', function () {
 
 // horaire page
  Route::get('/horaire', [FilmsController::class, 'index']);
-// Route::get('/horaire', function(){
-//         return Inertia::render('PAGE2/Horaire');
-// });
+//  tarif
+Route::get('/tarif', function(){
+        return Inertia::render('PAGE3/Ttarif');
+});
 
+Route::get('/send', [FormcontactController::class, 'index']);
+Route::post('/send',[FormcontactController::class, 'store']
+);
 require __DIR__.'/auth.php';

@@ -5,6 +5,8 @@ import '../css/header.css';
 import '../css/footer.css';
 import '../css/movielist.css'
 import '../css/DysBar.css'
+import '../css/formcontact.css'
+import '../css/bartemps.css'
 // slidetopmovie css
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
