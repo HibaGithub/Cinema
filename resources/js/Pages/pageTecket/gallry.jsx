@@ -20,7 +20,7 @@ export default function  Gallry(){
                     <p>18+</p>
                 </div>
             </div>
-            <section>
+            <section class='sectionGallry '>
                 <article>
                     <div></div>
                     <div></div>

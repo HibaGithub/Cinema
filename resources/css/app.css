@@ -162,7 +162,7 @@ p {
     color: #eaeaea;
 }
 
-.content > button {
+ .ButtonTecket {
     margin-top: 2.5em;
     padding: 16px 32px;
     border-radius: 10px;
@@ -174,9 +174,9 @@ p {
     transition: 0.3s;
 }
 
-.content > button:hover {
-    background-color: #5decff;
-    box-shadow: #2dd0e67e 0px 0px 1.2em;
+ .ButtonTecket:hover {
+    background-color: #0bb0c5;
+    /* box-shadow: #2dd0e67e 0px 0px 1.2em; */
 }
 
 /* category */

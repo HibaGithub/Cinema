@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-
+import { Link, usePage } from "@inertiajs/react";
 // Font awwesome library
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -93,9 +93,10 @@ export default function Slideshow() {
                                     <p>18+</p>
                                 </div>
                             </div>
-                            <button onclick="location.href='./index.html'">
+                            < Link href="/tecket" >  <button class="ButtonTecket" >
                                 Get your ticket
-                            </button>
+                            </button></Link>
+                            
                         </div>
                     </SwiperSlide>
                 ))}

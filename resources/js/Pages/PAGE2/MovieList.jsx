@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-
+import { Link, usePage } from "@inertiajs/react";
 
 export default function MovieList({data}) {
     
@@ -21,7 +21,7 @@ export default function MovieList({data}) {
                             <img src={`allimage/${film.image}`} alt="image" />
                             <div class="buy">
                                 <i class="fa-solid fa-ticket"></i>
-                                <a href="#">Buy ticket</a>
+                                             <Link href="/tecket" ><a href="#">Buy ticket</a></Link>
                             </div>
                         </div>
                         <div class="contant">

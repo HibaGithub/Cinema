@@ -37,14 +37,14 @@ margin-top: 160px;
 }
 
 /* galruy */
-section {
+.sectionGallry {
     width: 80%;
     margin: 0 auto;
     line-height: 0;
     position: relative;
 }
 
-section article {
+.sectionGallry article {
     position: absolute;
     top: 18px;
     width: 100%;
@@ -55,12 +55,12 @@ section article {
     mix-blend-mode: lighten;
 }
 
-section div {
+.sectionGallry div {
     background: rgb(245, 5, 5);
     height: 200px;
     border-radius: 25px;
 }
 
-section div:nth-of-type(2) {
+.sectionGallry div:nth-of-type(2) {
     grid-column: 2 / 4;
 }
