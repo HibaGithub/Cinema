@@ -25,12 +25,16 @@ header {
 }
 
 header .logo {
-    font-size: 1.5em;
+    /* font-size: 1.5em; */
     color: #44d6e9;
     text-decoration: none;
-    font-weight: 600;
+    /* font-weight: 600; */
     display: flex;
     justify-content: center;
+}
+header .logo img{
+    width: 150px;
+    height: 50px;
 }
 
 header .navigation {

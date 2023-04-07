@@ -30,7 +30,7 @@ export default function Form(status){
                         
             <textarea placeholder="How we can help..." name='message' class="field" value={data.message} onChange={e => setData('message', e.target.value)} ></textarea>
                         
-            <button class="send">Send</button>
+            <button class="send">Send</button><br/>
                         {errors.name  && errors.email && errors.message && errors.subject  && (
                             <div className="warning-messsage ">
                                 <i class="fa-sharp fa-solid fa-circle-exclamation mr-2  "></i>

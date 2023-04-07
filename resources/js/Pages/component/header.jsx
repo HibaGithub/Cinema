@@ -1,14 +1,15 @@
 import React from "react";
 // import '../css/app.css';
 import { Link, usePage } from "@inertiajs/react";
-
+import Logo from '../../../css/image/logo/cinimania_logo_light.png'
 export default function Header() {
     const { auth } = usePage().props;
     return (
         <header>
             <a href="#" class="logo">
-                Cinemania
+                <img src={Logo}/>
             </a>
+          
             <ul class="navigation">
                 <li id="movies">
                     <Link href="/">Accueil</Link>

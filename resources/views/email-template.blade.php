@@ -135,8 +135,7 @@
 
                                     <tr>
                                         <td align="center" style="font-size:0px;padding:10px 25px;padding-bottom:40px;word-break:break-word;">
-
-                                            <div style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:28px;font-weight:bold;line-height:1;text-align:center;color:#555;">
+                              {{-- <img align="center"  style="font-size:0px;padding:10px 25px;padding-bottom:40px;word-break:break-word;" src="cinimania_logo_dark.png"/>                                            <div style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:28px;font-weight:bold;line-height:1;text-align:center;color:#555;"> --}}
                                                 Welcome to <span style="color: #080E2C">Cinima<span style='color: #44D6E9'>Nia</span></span>
                                             </div>
 

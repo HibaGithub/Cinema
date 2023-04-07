@@ -88,4 +88,8 @@ Route::get('/tarif', function(){
 Route::get('/send', [FormcontactController::class, 'index']);
 Route::post('/send',[FormcontactController::class, 'store']
 );
+
+Route::get('/tecket',function(){
+        return Inertia::render('pageTecket/tecket');
+});
 require __DIR__.'/auth.php';

@@ -1,0 +1,16 @@
+.description {
+    padding-top: 420px;
+    padding-left: 8em;
+}
+
+.description h2 {
+    font-size: 30px;
+    color:#44d6e9;
+    /* font-weight: 600; */
+    margin: 0;
+}
+
+.description p {
+    width: 80%;
+    color: #fff;
+}
