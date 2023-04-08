@@ -9,7 +9,8 @@ import '../css/formcontact.css';
 import '../css/bartemps.css';
 import '../css/description.css';
 import '../css/gallry.css';
-import '../css/team-section.css'
+import '../css/team-section.css';
+import '../css/resirvation.css'
 // slidetopmovie css
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";

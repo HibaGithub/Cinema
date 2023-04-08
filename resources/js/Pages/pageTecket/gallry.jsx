@@ -1,6 +1,7 @@
-import react from 'react';
+import React  from "react";
 
-export default function  Gallry(){
+export default function  Gallry({datag}){
+    
     return (
 <div className='gallry-container'>
             <div class="titleGallry">
@@ -21,13 +22,18 @@ export default function  Gallry(){
                 </div>
             </div>
             <section class='sectionGallry '>
-                <article>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </article>
+                    { datag.map((f)=>
+                        <article>
+                             <div>
+                                {/* <img src={`BlackAdam/${f.image}`} alt="image" /> */}
+                            </div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </article>
+                    )}
+                   
             </section>
             </div>
     )

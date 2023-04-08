@@ -5,6 +5,7 @@ use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\Auth\NewPasswordController;
 use App\Http\Controllers\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Auth\RegisteredUserController;
+use App\Http\Controllers\filmGarllyController;
 use App\Http\Controllers\FormcontactController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -89,7 +90,5 @@ Route::get('/send', [FormcontactController::class, 'index']);
 Route::post('/send',[FormcontactController::class, 'store']
 );
 
-Route::get('/tecket',function(){
-        return Inertia::render('pageTecket/tecket');
-});
+Route::get('/tecket', [filmGarllyController::class,'index']);
 require __DIR__.'/auth.php';

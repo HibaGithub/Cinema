@@ -4,12 +4,15 @@ import Footer from '../component/footer';
 import Gallry from './gallry';
 import Description from './description';
 import Team from './team-section';
-export default function Tecket(){
+import Reservation from './Reservation';
+import { Head } from "@inertiajs/react";
+export default function Tecket({ filmgallry }){
     return(<>
         <Header />
-        <Gallry/>
+        <Gallry datag={filmgallry}/>
         <Description />
-<Team/>
+        <Team/>
+        <Reservation/>
         <Footer />
         </>
 

@@ -8,10 +8,12 @@ export default function MovieList({data}) {
     // .fillter(document.getElementsByClassName('container') =>
     //  document.getElementsByClassName('container').length(2)===button);
     // } 
+    
     console.log(data)
     return (
         <>
-            <div className="container-movie"> { 
+            <div className="container-movie">
+                 { 
                      data.map((film)=>
                        
             <section class="container">
