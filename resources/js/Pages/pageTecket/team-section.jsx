@@ -1,39 +1,18 @@
 import react from "react "
-export default function Team(){
+export default function Team({datat}){
     return(
         <div class="wrapper">
 
             <div class="members">
-                <div class="team-member">
-                    <img src="allimage/johnny-deep.jpg" alt=""/>
-                        <h4>jony deep</h4>
-                        <p>in locass</p>
-                </div>
-                <div class="team-member">
-                    <img src="allimage/johnny-deep.jpg" alt=""/>
-                        <h4>jony deep</h4>
-                        <p>in locass</p>
-                </div>
-                <div class="team-member">
-                    <img src="allimage/johnny-deep.jpg" alt=""/>
-                        <h4>jony deep</h4>
-                        <p>in locass</p>
-                </div>
-                <div class="team-member">
-                    <img src="allimage/johnny-deep.jpg" alt=""/>
-                        <h4>jony deep</h4>
-                        <p>in locass</p>
-                </div>
-                <div class="team-member">
-                    <img src="allimage/johnny-deep.jpg" alt=""/>
-                        <h4>jony deep</h4>
-                        <p>in locass</p>
-                </div>
-                <div class="team-member">
-                    <img src="allimage/johnny-deep.jpg" alt=""/>
-                        <h4>jony deep</h4>
-                        <p>in locass</p>
-                </div>
+                {datat.map((team)=>(
+                    <div class="team-member">
+                        <img src={`BlackAdam/team/${team.profil}`} alt="image" />
+                        <h4>{team.reelnama}</h4>
+                        <p>in {team.fakename}</p>
+                    </div>
+                ))}
+               
+                
             </div>
         </div>
 

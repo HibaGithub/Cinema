@@ -7,6 +7,7 @@ use App\Http\Controllers\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\filmGarllyController;
 use App\Http\Controllers\FormcontactController;
+use App\Http\Controllers\teamSectionController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -91,4 +92,5 @@ Route::post('/send',[FormcontactController::class, 'store']
 );
 
 Route::get('/tecket', [filmGarllyController::class,'index']);
+Route::get('/tecket', [teamSectionController::class, 'index']);
 require __DIR__.'/auth.php';

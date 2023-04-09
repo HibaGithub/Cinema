@@ -2,17 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use Inertia\Inertia;
-use App\Models\FilmGarlly;
+use inertia\inertia;
+use App\Models\teamSection;
 use Illuminate\Http\Request;
 
-class filmGarllyController extends Controller
+class teamSectionController extends Controller
 {
     public function index()
 
     {
-        $props = FilmGarlly::all();
+        $props = teamSection::all();
         return inertia::render('pageTecket/tecket', ['props' => $props]);
     }
-
 }

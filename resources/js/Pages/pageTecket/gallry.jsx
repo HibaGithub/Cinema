@@ -24,13 +24,12 @@ export default function  Gallry({datag}){
             <section class='sectionGallry '>
                     { datag.map((f)=>
                         <article>
-                             <div>
-                                {/* <img src={`BlackAdam/${f.image}`} alt="image" /> */}
-                            </div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
+                            <img src={`BlackAdam/gallry/${f.image}`} alt="image" />
+                            <img src="" alt="" />
+                            <img src="" alt="" />
+                            <img src="" alt="" />
+                            <img src="" alt="" />
+                            {/* <img src="" alt="" /> */}
                         </article>
                     )}
                    

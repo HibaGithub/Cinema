@@ -6,12 +6,12 @@ import Description from './description';
 import Team from './team-section';
 import Reservation from './Reservation';
 import { Head } from "@inertiajs/react";
-export default function Tecket({ filmgallry }){
+export default function Tecket({ props}){
     return(<>
         <Header />
-        <Gallry datag={filmgallry}/>
+        <Gallry datag={props}/>
         <Description />
-        <Team/>
+        <Team datat={props} />
         <Reservation/>
         <Footer />
         </>
