@@ -62,7 +62,7 @@
     font-weight: 200;
     color: #c9c9c9;
     font-size: 14px;
-    margin-top: 8px;
+    margin-top: 2px;
 }
 
 #calandre-box #spot {
@@ -78,15 +78,15 @@
     z-index: -1;
 }
 
-#calandre-box span:nth-child(1) {
+#calandre-box .focus {
     font-size: 24px;
     font-weight: 700;
     color: #080e2c;
 }
 
-#calandre-box span:nth-child(1)>p {
+#calandre-box .focus>p {
     font-weight: 600;
     color: #080e2c8d;
     font-size: 18px;
-    margin-top: 8px;
+    margin-top: 5px;
 }

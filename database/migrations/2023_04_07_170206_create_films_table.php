@@ -20,6 +20,8 @@ return new class extends Migration
             $table->integer('age');
             $table->decimal('duration', 6, 0);
             $table->date('date-edition');
+            $table->date('date-diffusion');
+
         });
     }
 

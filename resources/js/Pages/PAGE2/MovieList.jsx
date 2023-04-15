@@ -1,7 +1,10 @@
-import React, { useRef, useState } from "react";
+import React, { useContext, useRef, useState } from "react";
 import { Link, usePage } from "@inertiajs/react";
+import { DateFilm } from "./Horaire";
+
 
 export default function MovieList({data}) {
+    const { currentDate } = useContext(DateFilm)
     
     // const fillter = (button)=>{
     //    const filterdata = document.getElementsByClassName('container')
@@ -9,14 +12,15 @@ export default function MovieList({data}) {
     //  document.getElementsByClassName('container').length(2)===button);
     // } 
     
-    console.log(data)
+    console.log(currentDate)
     return (
         <>
             <div className="container-movie">
                  { 
-                     data.map((film)=>
-                       
-            <section class="container">
+                    data.map((film) =>
+                    Date.parse(film['date-diffusion']) == currentDate &&
+                    <section class="container">
+                    {console.log(Date.parse(film['date-diffusion']),'-', currentDate)}
                 <div class="box-container">
                     <div class="box">
                         <div class="image">
@@ -59,6 +63,7 @@ export default function MovieList({data}) {
                     </div>
                 </div>
                 </section>
+
                       
                 )}</div>
                    

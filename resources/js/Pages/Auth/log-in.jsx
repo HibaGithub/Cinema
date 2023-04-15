@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link, useForm } from "@inertiajs/react";
 import React, { useState } from "react";
 
+
 export default function SignUp() {
     const { data, setData, post, errors } = useForm({
         email: "",
@@ -16,6 +17,11 @@ export default function SignUp() {
         e.preventDefault();
         post("login", data);
     };
+
+    const pageHistory = () => {
+        window.history.back();
+    }
+
     return (
         <section class="Login">
             <div class="d-flex justify-content-center align-items-center h-screen">
@@ -25,8 +31,8 @@ export default function SignUp() {
                 >
                     <Link
                         className="text-sm absolute left-7 top-6"
-                        href="/"
                         id="back"
+                        onClick={pageHistory}
                     >
                         <FontAwesomeIcon icon={faArrowLeft} /> Back to home
                     </Link>
@@ -96,7 +102,6 @@ export default function SignUp() {
                         <span className="font-style">
                             Don’t have an account?
                         </span>
-                        <br />
                         <Link href="/signup" class="main-color sign-link">
                             Sign Up Now!
                         </Link>

@@ -15,6 +15,11 @@ export default function SignUp() {
         e.preventDefault();
         post("signup", data);
     };
+
+    const pageHistory = () => {
+        window.history.back();
+    }
+
     return (
         <section class="SignUp">
             <div class="d-flex justify-content-center align-items-center h-screen">
@@ -24,12 +29,12 @@ export default function SignUp() {
                 >
                     <Link
                         className="text-sm absolute left-7 top-6"
-                        href="/"
                         id="back"
+                        onClick={pageHistory}
                     >
                         <FontAwesomeIcon icon={faArrowLeft} /> Back to home
                     </Link>
-                    <h2 class="text-center my-5 fw-bold text-5xl">Sign Up</h2>
+                    <h2 class="text-center my-3 fw-bold text-5xl">Sign Up</h2>
                     <div className="input-container text-start space-y-3">
                         <input
                             type="text"
@@ -91,7 +96,7 @@ export default function SignUp() {
                     </button>
                     <div class="mt-4">
                         <span class="font-style">You have an account? </span>
-                        <Link href="/login" className="text-secondary-light">
+                        <Link href="/login" className="login-link">
                             login
                         </Link>
                     </div>

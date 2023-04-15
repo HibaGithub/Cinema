@@ -3,11 +3,22 @@ import Footer from "../component/footer";
 import DaysBar from './daysBar'
 import MovieList from "./MovieList";
 import { Head } from "@inertiajs/react";
-export default function Horaire({films}) {
+import { createContext, useEffect, useState } from "react";
+
+export const DateFilm = createContext({date:'', setDate:() => {}})
+export default function Horaire({ films }) {
+    const [currentDate, setCurrentDate] = useState()
+    const value = { currentDate, setCurrentDate };
+
+    useEffect(() => {
+        fetch('')
+    })
     return (<>
         <Header />
-        <DaysBar/>
-        <MovieList data={films} />
+        <DateFilm.Provider value={value}>
+            <DaysBar/>
+            <MovieList data={films} />
+        </DateFilm.Provider>
         <Footer/> 
         {/* <App/> */}
     

@@ -15,6 +15,11 @@ export default function ForgetPassword({ status }) {
         e.preventDefault();
         post("forgetPassword", data);
     };
+
+    const pageHistory = () => {
+        window.history.back();
+    }
+
     return (
         <section className="ForgetPassword relative">
             {status ? (
@@ -33,7 +38,8 @@ export default function ForgetPassword({ status }) {
                 >
                     <Link
                         className="text-sm absolute left-7 top-6"
-                        href="/"
+                        // href="/"
+                        onClick={pageHistory}
                         id="back"
                     >
                         <FontAwesomeIcon icon={faArrowLeft} /> Back to home
