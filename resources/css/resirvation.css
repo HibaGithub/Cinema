@@ -39,7 +39,7 @@ form span {
     width: 100%;
     outline: none;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid #b7b7b7;
     padding-left: 15px;
     font-size: 15px;
     border-bottom-width: 2px;
@@ -50,7 +50,7 @@ form span {
 .form-group input:valid,
 .form-group input:active {
     /* border-color: #101b56; */
-    border: none;
+    /* border: none; */
     outline: none;
     /* overflow-inline: none; */
 }
