@@ -11,9 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('films', function (Blueprint $table) {
-           
-        });
+        Schema::table('horair', function (Blueprint $table) {
+             $table->time('hour');
+        }
+            
+        );
     }
 
     /**
@@ -21,6 +23,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('films');
+        Schema::table('horair', function (Blueprint $table) {
+            //
+        });
     }
 };

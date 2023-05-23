@@ -11,8 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('films', function (Blueprint $table) {
-           
+        Schema::table('films', function (Blueprint $table) {
+            $table->char('traile');
+
+
         });
     }
 

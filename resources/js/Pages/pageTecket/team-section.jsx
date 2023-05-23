@@ -5,6 +5,7 @@ export default function Team({datat}){
 
             <div class="members">
                 {datat.map((team)=>(
+                    
                     <div class="team-member">
                         <img src={`BlackAdam/team/${team.profil}`} alt="image" />
                         <h4>{team.reelnama}</h4>

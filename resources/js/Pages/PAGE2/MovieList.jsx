@@ -4,7 +4,7 @@ import { DateFilm } from "./Horaire";
 
 
 export default function MovieList({data}) {
-    const { currentDate } = useContext(DateFilm)
+    const { currentDate }= useContext(DateFilm)
     
     // const fillter = (button)=>{
     //    const filterdata = document.getElementsByClassName('container')
@@ -16,18 +16,18 @@ export default function MovieList({data}) {
     return (
         <>
             <div className="container-movie">
-                 { 
+                { 
                     data.map((film) =>
-                    Date.parse(film['date-diffusion']) == currentDate &&
+                        Date.parse(new Date(film['date-diffusion']).toLocaleDateString('en-us')) == currentDate &&
                     <section class="container">
-                    {console.log(Date.parse(film['date-diffusion']),'-', currentDate)}
+                    {/* {console.log(Date.parse(film['date-diffusion']),'-', currentDate)} */}
                 <div class="box-container">
                     <div class="box">
                         <div class="image">
-                            <img src={`allimage/${film.image}`} alt="image" />
+                            <img src= {`allimage/${film.image}`} alt="image" />
                             <div class="buy">
                                 <i class="fa-solid fa-ticket"></i>
-                                             <Link href="/tecket" ><a href="#">Buy ticket</a></Link>
+                                             <Link href={`/tecket/${film.id}`}   ><a href="#">Buy ticket</a></Link>
                             </div>
                         </div>
                         <div class="contant">

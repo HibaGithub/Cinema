@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Films;
 use Inertia\Inertia;
-use App\Models\FilmGarlly;
+use App\Models\gallryFilms;
 use Illuminate\Http\Request;
 
 class filmGarllyController extends Controller
@@ -11,8 +12,9 @@ class filmGarllyController extends Controller
     public function index()
 
     {
-        $props = FilmGarlly::all();
-        return inertia::render('pageTecket/tecket', ['props' => $props]);
+        $imageGallry = gallryFilms::all();
+        info( 1);
+        return inertia::render('pageTecket/tecket', ['imageGallry ' => $imageGallry]);
     }
 
 }

@@ -12,6 +12,7 @@ class teamSectionController extends Controller
 
     {
         $props = teamSection::all();
+        
         return inertia::render('pageTecket/tecket', ['props' => $props]);
     }
 }

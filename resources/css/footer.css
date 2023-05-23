@@ -67,12 +67,12 @@ footer .facebook:hover path {
 }
 
 footer .instagram:hover path {
-    fill: #e1306c;
+    fill: #1877f2;
     transition: 0.3s;
 }
 
 footer .tiktok:hover path {
-    fill: #ff0050;
+    fill: #1877f2;
     transition: 0.3s;
 }
 

@@ -5,13 +5,13 @@
     max-width: 1000px;
     width: 100%;
     padding: 25px 30px;
-    background-color: #fefefe;
+    background-color: #ffffff7b;
     border-radius: 5px;
 }
 
 .containerR .title {
     font-size: 30px;
-    font-weight: 500;
+    font-weight: 600;
     color: #101b56;
 }
 
@@ -29,9 +29,9 @@ form .form-group {
 
 form span {
     display: block;
-    font-weight: 500;
+    font-weight: 700;
     margin-bottom: 5px;
-    color: #000a3d;
+    color: #010e4c;
 }
 
 .form-group input,.form-group select {
@@ -39,7 +39,7 @@ form span {
     width: 100%;
     outline: none;
     border-radius: 5px;
-    border: 1px solid #b7b7b7;
+    border: 1px solid #d3d3d3;
     padding-left: 15px;
     font-size: 15px;
     border-bottom-width: 2px;
@@ -77,7 +77,11 @@ form .button input {
 form .button input:hover {
     background: linear-gradient(130deg, #0e1b5a, #1d2b78);
 }
-
+.payment{
+    background-color:#0e1b5a;
+    color: cornsilk;
+    border:none;
+}
 @media(max-width: 584px) {
     .containerR {
         max-width: 80%;

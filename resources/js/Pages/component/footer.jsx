@@ -3,11 +3,11 @@ export default function Footer(){
    return  <footer>
         <div class="column">
             <div class="logo">
-                <h1>Megarama</h1>
+                <h1>Cinimania</h1>
             </div>
             <p>
-                © 2022<br />
-                Megarama<br />
+                © 2023<br />
+                Cinimania<br />
                 All right reserved
             </p>
         </div>
@@ -26,7 +26,7 @@ export default function Footer(){
         </div>
         <div class="column">
             <h1>Contact</h1>
-            <a href="mailto:Megarama@contact.com">Megarama@contact.com</a>
+            <a href="mailto:Megarama@contact.com">Cinimania@gmail.com</a>
         </div>
         <div class="column">
             <h1>Social media</h1>
