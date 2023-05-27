@@ -9,13 +9,13 @@ export default function Reservation({dataR}){
         Last_name : '',
         email : '',
         Phone_Number : '',
-        // Film_Name : '',
-        // Film_Category : '',
+        Film_Name : '',
+        Film_Category : '',
         // Day : '',
         // Hour : '',
         Salle : '',
         Heure: '',
-        payment:''
+        // payment:''
     })
 
     function submit(e) {
@@ -27,7 +27,7 @@ export default function Reservation({dataR}){
         <div class="containerR">
           
             <div class="title">Resirvation</div>
-            {dataR.map((reserve) => (
+            
                 <form action="#" onSubmit={submit}>
                     <div class="form-group">
                         <span> First Name</span>
@@ -47,34 +47,45 @@ export default function Reservation({dataR}){
                     </div>
                     <div class="form-group">
                         <span>Film Name</span>
-                        <input type="text" name='Film_Name' placeholder="Enter film name" value={reserve.titre} onChange={e => setData('Film_Name', e.target.value)} d />
+                    <input type="text" name='Film_Name' placeholder="Enter film name" value={data.titre} onChange={e => setData('Film_Name', e.target.value)} d />
                     </div>
                     <div class="form-group">
                         <span> Film Category </span>
-                        <input type="text" name='Film_Category' placeholder="Enter film category " value={reserve.categorie} onChange={e => setData('Film_Category', e.target.value)} />
+                    <input type="text" name='Film_Category' placeholder="Enter film category " value={data.categorie} onChange={e => setData('Film_Category', e.target.value)} />
                     </div>
-                    {/* <div class="form-group">
+                    <div class="form-group">
                         <span> Day for watch movie </span>
                         <input type="text" name='Day' placeholder="manday " value={data.Day} onChange={e => setData('Day', e.target.value)} />
-                    </div> */}
-                    <div class="form-group">
-                        <span> duration  </span>
-                        <input type="text" name='Hour' placeholder="14H 00min "  value={reserve.duration} />
                     </div>
                     <div class="form-group">
+                    <span>time of film</span>
+                    <input type="text" name='Hour' placeholder="14H 00min " value={data.Hour} onChange={e => setData('Hour', e.target.value)} />
+                    </div>
+                    {/* <div class="form-group">
                         <span> Salle de film  </span>
                         <input type="text" name='City' placeholder="Enter your city " value={data.Salle} onChange={e => setData('Salle', e.target.value)} />
                     </div>
-                    <div class="form-group">
-                        <span> Heure de film </span>
-                        {/* <input type="text" placeholder="Enter film category " required /> */}
-                        <input name='Heure' value={data.Heure} onChange={e => setData('Heure', e.target.value)} />
+                    // <div class="form-group">
+                    //     <span> Heure de film </span>
+                       
+                    //     <input name='Heure' value={data.Heure} onChange={e => setData('Heure', e.target.value)} />
 
-                    </div>
+                    // </div> */}
                     <div class="form-group">
-                        <span></span><br/>
-                        <input type="submit"  class='payment'value='payment'/>
+                        <span> City  </span>
+                    <input type="text" name='City' placeholder="entre votre city " value={data.City} onChange={e => setData('City', e.target.value)} />
                     </div>
+                    
+                <div class="form-group">
+                    <span> Cinema Name  </span>
+                    <select name="cinimaname" value={data.cinimaname} onChange={e => setData('cinimaname', e.target.value)} >
+                        <option>selected cinema name</option>
+                        <option>Megarama</option>
+                        <option>Cinimax</option>
+                        <option>cinima saada</option>
+                        <option>gfi cinema </option>
+                    </select>
+                </div>
 
                     <div class="button">
                         <button class="send">Send</button><br />
@@ -88,7 +99,7 @@ export default function Reservation({dataR}){
                     </div>
 
                 </form>
-            ))}
+          
             
         </div>
 

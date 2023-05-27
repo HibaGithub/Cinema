@@ -32,8 +32,8 @@ class resirvationController extends Controller
             "Film_Category" => 'required',
             // "Day" => 'required',
             "Hour" => 'required',
-            // "City" => 'required',
-            "payment" => 'required',
+             "City" => 'required',
+            "cinimaname" => 'required',
         ]);
 
 

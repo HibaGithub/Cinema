@@ -47,18 +47,23 @@ export default function MovieList({data}) {
                                     <span>+{film.age}</span>
                                 </div>
                             </div>
-                            <div class="salle1">
-                                <h3>salle1</h3>
-                                <div>
-                                    <span>14:30</span><span>18:30</span><span>20:30</span><span>22:30</span>
+                        {/* {salleinfo.map(()=>( */}
+                            {/* <> */}
+                                <div class="salle1">
+
+                                    <h3>salle1</h3>
+                                    <div>
+                                        <span>14:30</span><span>18:30</span><span>20:30</span><span>22:30</span>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="salle2">
-                                <h3>salle3</h3>
-                                <div>
-                                    <span>12:30</span><span>14:00</span><span>17:30</span>
+                                <div class="salle2">
+                                    <h3>salle3</h3>
+                                    <div>
+                                        <span>12:30</span><span>14:00</span><span>17:30</span>
+                                    </div>
                                 </div>
-                            </div>
+                                {/* </> */}
+                        {/* ))} */}
                         </div>
                     </div>
                 </div>

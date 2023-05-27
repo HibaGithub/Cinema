@@ -32,8 +32,7 @@ export default function  Gallry({datag, dataf}){
                     { datag.map((f, i)=>
                     i === 0?
                             <video controls autoplay>
-                                <source src="https://imdb-video.media-imdb.com/vi3315844377/1434659607842-pgv4ql-1666195860663.mp4?Expires=1684334959&Signature=S3ZhgaV2TDzYi8iB8shDtGX84lF2zt-UBFuolx82rrkArFNlwPQlzpyovWtIMdsqgdmJGccCp374YQyjjnrfPmZQMPuiX67QZSEK5dIR0JlSfM3mV3dOadnE1ezCtbyWjf15i5ezoL-WJN22yidFyusTIX1a5YbIC-hWu-dhBt8L9xOreuJocUmX5jaGJXwW6y-qFdcM0vZzwpERY-Ix3znfSD419mRq0tYmk9hui4TPd1bpTQxr2wXbyP06m-lCJPqXVRmB7Hm6YCGMnbDfwJlcNlbKFY8smmgFaEENhAlIc4NE3Y-~A1~0QPGL~I-iwmblGwvUciiFyTTeAbCxRw__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA" type="video/mp4" />
-                        </video>
+                                <source src="https://imdb-video.media-imdb.com/vi3315844377/1434659607842-pgv4ql-1666195860663.mp4?Expires=1684334959&Signature=S3ZhgaV2TDzYi8iB8shDtGX84lF2zt-UBFuolx82rrkArFNlwPQlzpyovWtIMdsqgdmJGccCp374YQyjjnrfPmZQMPuiX67QZSEK5dIR0JlSfM3mV3dOadnE1ezCtbyWjf15i5ezoL-WJN22yidFyusTIX1a5YbIC-hWu-dhBt8L9xOreuJocUmX5jaGJXwW6y-qFdcM0vZzwpERY-Ix3znfSD419mRq0tYmk9hui4TPd1bpTQxr2wXbyP06m-lCJPqXVRmB7Hm6YCGMnbDfwJlcNlbKFY8smmgFaEENhAlIc4NE3Y-~A1~0QPGL~I-iwmblGwvUciiFyTTeAbCxRw__&Key-Pair-Id=APKAIFLZBVQZ24NQH3KA" type="video/mp4"/></video>
                         :
                         <img src={`BlackAdam/${f.image}`} alt="image" />
 

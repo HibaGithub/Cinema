@@ -5,7 +5,7 @@
     max-width: 1000px;
     width: 100%;
     padding: 25px 30px;
-    background-color: #ffffff7b;
+    background-color: #e4e3e3fa;
     border-radius: 5px;
 }
 
@@ -39,7 +39,7 @@ form span {
     width: 100%;
     outline: none;
     border-radius: 5px;
-    border: 1px solid #d3d3d3;
+    border: 1px solid #b4b0ef;
     padding-left: 15px;
     font-size: 15px;
     border-bottom-width: 2px;
@@ -52,6 +52,8 @@ form span {
     /* border-color: #101b56; */
     /* border: none; */
     outline: none;
+    
+    
     /* overflow-inline: none; */
 }
 
