@@ -90,3 +90,13 @@
     font-size: 18px;
     margin-top: 5px;
 }
+
+@media only screen and (max-width: 1200px){
+    .calandre{
+        overflow: hidden;
+        height: inherit;
+    }
+    #calandre-box{
+        left: 70%;
+    }
+}

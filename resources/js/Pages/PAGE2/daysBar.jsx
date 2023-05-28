@@ -14,6 +14,9 @@ export default function DaysBar() {
     },[])
     const handelSpotPosition = (e) => {
         spot.current.style.translate = `${162 * e.target.dataset.id}px`
+        if (window.innerWidth <= 1200) {
+            datebar.current.style.translate = `${-14 * e.target.dataset.id}%`;
+        }
         // console.log(e.target.dataset.id > 0 && e.target.dataset.id - 1);
         // console.log(e.target.dataset.id > previousPosition);
 
@@ -33,7 +36,7 @@ export default function DaysBar() {
         //  < !--calandre time day-- >
         <section class="calandre">
             {/* <!-- <h2>HORAIRE</h2> --> */}
-            <div id="calandre-box" ref={datebar} className="cursor-pointer">
+            <div id="calandre-box" ref={datebar} className="cursor-pointer transition-all ease-in-out duration-200">
                 <span id="today" data-id="0" className="focus transition-all ease-in-out duration-200" onClick={handelSpotPosition}>Today <p id="date" data-date={(new Date(new Date().setDate(new Date().getDate())).toLocaleDateString('en-us'))} style={{pointerEvents:'none'}}>{(new Date(new Date().setDate(new Date().getDate())).toLocaleDateString('fr-us',{day:'numeric', month:'long'}))}</p></span>
                 <span id="tmorrow" data-id="1" className="transition-all ease-in-out duration-200" onClick={handelSpotPosition}>Tomorrow<p id="date" data-date={(new Date(new Date().setDate(new Date().getDate() + 1)).toLocaleDateString('en-us'))} style={{pointerEvents:'none'}}>{(new Date(new Date().setDate(new Date().getDate() + 1)).toLocaleDateString('fr-us',{day:'numeric', month:'long'}))}</p></span>
                 <span id="wendnesday" data-id="2" className="transition-all ease-in-out duration-200 capitalize" onClick={handelSpotPosition}>{(new Date(new Date().setDate(new Date().getDate() + 2)).toLocaleDateString('fr-us',{weekday:'long'}))}<p id="date" data-date={(new Date(new Date().setDate(new Date().getDate() + 2)).toLocaleDateString('en-us'))} style={{pointerEvents:'none'}}>{(new Date(new Date().setDate(new Date().getDate() + 2)).toLocaleDateString('fr-us',{day:'numeric', month:'long'}))}</p></span>

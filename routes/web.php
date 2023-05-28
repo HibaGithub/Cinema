@@ -1,17 +1,18 @@
 <?php
 
+use Inertia\Inertia;
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FilmsController;
-use App\Http\Controllers\Auth\AuthenticatedSessionController;
-use App\Http\Controllers\Auth\NewPasswordController;
-use App\Http\Controllers\Auth\PasswordResetLinkController;
-use App\Http\Controllers\Auth\RegisteredUserController;
+use App\Http\Controllers\TecketController;
 use App\Http\Controllers\filmGarllyController;
 use App\Http\Controllers\FormcontactController;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\resirvationController;
 use App\Http\Controllers\teamSectionController;
-use Illuminate\Support\Facades\Route;
-use Inertia\Inertia;
+use App\Http\Controllers\Auth\NewPasswordController;
+use App\Http\Controllers\Auth\RegisteredUserController;
+use App\Http\Controllers\Auth\PasswordResetLinkController;
+use App\Http\Controllers\Auth\AuthenticatedSessionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -94,8 +95,8 @@ Route::post('/send',[FormcontactController::class, 'store']
 );
 
 // form resirvation tecket 
-Route::get('/envoyer', [resirvationController::class, 'index']);
-Route::post('/envoyer',[resirvationController::class, 'store']);
+// Route::get('/envoyer', [resirvationController::class, 'index']);
+// Route::post('/envoyer',[resirvationController::class, 'store']);
 
 Route::get('/tecket', [filmGarllyController::class, 'index']);
 Route::get('/tecket', [teamSectionController::class, 'index']);
@@ -103,4 +104,8 @@ Route::get('/tecket', [teamSectionController::class, 'index']);
 // checkout page
 Route::get('/payment', [PaymentController::class, "index"]);
 Route::post('/charge', [PaymentController::class, "pay"]);
+// Route::get('/tecket', [filmGarllyController::class, 'index']);
+// Route::get('/tecket', [teamSectionController::class, 'index']);
+Route::get('/tecket/{id}', [TecketController::class, 'index']);
+
 require __DIR__ . '/auth.php';

@@ -34,9 +34,11 @@
     grid-template-columns: auto auto auto;
 }
 
-.team-member img {
+.team-member > img {
     width: 100px;
     height: 100px;
+    object-fit: cover;
+    object-position: top;
     border-radius: 50%;
     margin: 10px;
 }

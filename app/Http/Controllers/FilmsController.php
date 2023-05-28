@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use Inertia\Inertia;
-use Illuminate\Http\Request;
 use App\Models\Films;
+use App\Models\Salle;
+use Illuminate\Http\Request;
+// use App\Models\Salle;
 
 class FilmsController extends Controller
 {
@@ -15,6 +17,7 @@ class FilmsController extends Controller
    
     {
         $Films=Films::all();
+        // $imageGallry =Salle::all();
         return inertia::render('PAGE2/Horaire',['films'=> $Films]);
        
     }

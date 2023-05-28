@@ -30,9 +30,9 @@ class resirvationController extends Controller
             "Phone_Number" => 'required',
             "Film_Name" => 'required',
             "Film_Category" => 'required',
-            "Day" => 'required',
+            // "Day" => 'required',
             "Hour" => 'required',
-            "City" => 'required',
+             "City" => 'required',
             "cinimaname" => 'required',
         ]);
 

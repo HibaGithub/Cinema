@@ -8,7 +8,7 @@ export default function Form(status){
         subject: '',
         message: '',
     })
-
+    
     function submit(e) {
         e.preventDefault()
         post('/send')

@@ -227,11 +227,11 @@
             <span style="  
             font-weight: 700;
             color: black">City:</span> <span>{{$formCity}}</span><br/>
-             <span style="  
+         <span style="  
             font-weight: 700;
             color: black">Ou:</span> <span>{{$formcinimaname}}</span><br/>
        
-            
+          
            
 
            
