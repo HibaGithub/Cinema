@@ -1,3 +1,4 @@
+
   <!doctype html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
 
@@ -54,6 +55,63 @@
             display: block;
             margin: 13px 0;
         }
+        /* table */
+             .container1 {
+	max-width: 1000px;
+	margin-right:auto;
+	margin-left:auto;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	min-height:100vh;
+}
+
+.table {
+	width:100%;
+	border:1px solid $color-form-highlight;
+}
+
+.table-header {
+	display:flex;
+	width:100%;
+	background:#000;
+	padding:($half-spacing-unit * 1.5) 0;
+}
+
+.table-row {
+	display:flex;
+	width:100%;
+	padding:($half-spacing-unit * 1.5) 0;
+	
+
+}
+
+.table-data, .header__item {
+	flex: 1 1 20%;
+	text-align:center;
+}
+
+.header__item {
+	text-transform:uppercase;
+}
+
+.filter__link {
+	color:white;
+	text-decoration: none;
+	position:relative;
+	display:inline-block;
+	padding-left:$base-spacing-unit;
+	padding-right:$base-spacing-unit;
+	
+	
+	
+	
+	
+}  .bold{
+            
+            font-weight: 700;
+            color: black
+        }
     </style>
     <!--[if !mso]><!-->
     <style type="text/css">
@@ -65,6 +123,7 @@
                 width: 320px;
             }
         }
+      
     </style>
    
 
@@ -137,40 +196,50 @@
                                     </tr>
                                     <tr>
                                         <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
-                                            <div style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:16px;line-height:22px;text-align:left;color:#555;">
-                                                Hello {{$formName}}!
+                                            <div style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:16px;line-height:22px;text-align:left;color:#000000;">
+                                                La résirvation de tecket par  Mr(Mme,Mlle): <span style="color:rgb(0, 0, 190)">{{$formFirst_name}}  {{$formLast_name}} !!</span>
                                                 <br> 
-                                                {{-- , {{$formFirst_name}},{{$formLast_name}} !<br><br/> --}}
-                                                email:{{$formEmail}} 
-                                                {{-- ,{{$formemail}} --}}
+                                                {{-- , <br><br/> --}}
+                                                email:
+                                                {{$formemail}}
 
                                             <br><br/>
-                                        subject: {{$formSubject}}
-                                        {{-- <table>
-                                            
-                                            <tr>
-                                                <td>formFilm_Name</td>
-                                                 <td>formFilm_Category</td>
-                                                  <td>formDay</td>
-                                                   <td>formHour</td>
-                                                    <td>formCity</td>
-                                                     <td>formcinimaname</td>
-                                            </tr>
-                                              <tr>
-                                                <td>{{$formFilm_Name}}</td>
-                                                 <td>{{$formFilm_Category}}</td>
-                                                  <td>{{$formDay}}</td>
-                                                   <td>{{$formHour}}</td>
-                                                    <td>{{$formCity}}</td>
-                                                     <td>{{$formcinimaname}}</td>
-                                            </tr>
-                                        </table> --}}
-                                        <br><br/>                                                                                                                     {{$body}}
-                                    </div>
-                                        </td>
-                                    </tr>
-                                </table>
+                                        subject: {{$formFilm_Name}}
 
+                                      <br/><br/>
+	
+	
+	
+
+
+            <span class="bold"style="  
+            font-weight: 700;
+            color: black" >Film Name:</span> <span>{{$formFilm_Name}}</span><br/>
+            <span style="  
+            font-weight: 700;
+            color: black"> Film Category:</span>  <span> {{$formFilm_Category}}</span><br/>
+            <span style="  
+            font-weight: 700;
+            color: black">Day:</span> <span>{{$formDay}}</span><br/>
+            <span style="  
+            font-weight: 700;
+            color: black">Hour:</span> <span>{{$formHour}}</span><br/>
+            <span style="  
+            font-weight: 700;
+            color: black">City:</span> <span>{{$formCity}}</span><br/>
+             <span style="  
+            font-weight: 700;
+            color: black">Ou:</span> <span>{{$formcinimaname}}</span><br/>
+       
+            
+           
+
+           
+           
+       
+   
+</div>
+                                 
                             </div>
 
                         </td>
@@ -182,9 +251,7 @@
 
 
 
-        <div style="Margin:0px auto;max-width:600px;">
-
-            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
                 <tbody>
                     <tr>
                         <td style="direction:ltr;font-size:0px;padding:20px 0;text-align:center;vertical-align:top;">
@@ -233,11 +300,6 @@
                     </tr>
                 </tbody>
             </table>
-
-        </div>
-
-
-
 
     </div>
 

@@ -7,6 +7,8 @@ use App\Http\Controllers\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\filmGarllyController;
 use App\Http\Controllers\FormcontactController;
+use App\Http\Controllers\PaymentController;
+use App\Http\Controllers\resirvationController;
 use App\Http\Controllers\teamSectionController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -81,9 +83,9 @@ Route::get('/top-movie', function () {
 });
 
 // horaire page
- Route::get('/horaire', [FilmsController::class, 'index']);
+Route::get('/horaire', [FilmsController::class, 'index']);
 //  tarif
-Route::get('/tarif', function(){
+Route::get('/tarif', function () {
         return Inertia::render('PAGE3/Ttarif');
 });
 
@@ -91,6 +93,14 @@ Route::get('/send', [FormcontactController::class, 'index']);
 Route::post('/send',[FormcontactController::class, 'store']
 );
 
-Route::get('/tecket', [filmGarllyController::class,'index']);
+// form resirvation tecket 
+Route::get('/envoyer', [resirvationController::class, 'index']);
+Route::post('/envoyer',[resirvationController::class, 'store']);
+
+Route::get('/tecket', [filmGarllyController::class, 'index']);
 Route::get('/tecket', [teamSectionController::class, 'index']);
-require __DIR__.'/auth.php';
+
+// checkout page
+Route::get('/payment', [PaymentController::class, "index"]);
+Route::post('/charge', [PaymentController::class, "pay"]);
+require __DIR__ . '/auth.php';

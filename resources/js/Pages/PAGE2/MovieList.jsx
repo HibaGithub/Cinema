@@ -12,15 +12,16 @@ export default function MovieList({data}) {
     //  document.getElementsByClassName('container').length(2)===button);
     // } 
     
-    console.log(currentDate)
+    // console.log(data)
     return (
         <>
             <div className="container-movie">
                  { 
                     data.map((film) =>
-                    Date.parse(film['date-diffusion']) == currentDate &&
+                    // console.log(new Date(film['date-diffusion']).toLocaleDateString('en-us')), 
+                    Date.parse(new Date(film['date-diffusion']).toLocaleDateString('en-us')) == currentDate &&
                     <section class="container">
-                    {console.log(Date.parse(film['date-diffusion']),'-', currentDate)}
+                    {/* {console.log(Date.parse(film['date-diffusion']),'-', currentDate)} */}
                 <div class="box-container">
                     <div class="box">
                         <div class="image">

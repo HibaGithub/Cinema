@@ -6,7 +6,6 @@ margin-top: 160px;
 .titleGallry {
     padding-left: 8em;
     color: #44d6e9;
-
 }
 .titleGallry>h1 {
     font-size: 40px;
@@ -64,3 +63,19 @@ margin-top: 160px;
 .sectionGallry img:nth-of-type(2) {
     grid-column: 2 / 4;
 }
+
+.sr-combo-inputs {
+    margin: 20px 0;
+  }
+  
+  .sr-input {
+    font-size: 16px;
+  }
+  
+  .sr-card-element {
+    padding-top: 12px;
+  }
+  
+  .btn {
+    font-size: 16px;
+  }

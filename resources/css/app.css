@@ -470,3 +470,7 @@ swiper-button-disabled */
     height: 45px;
     transform: translateY(-50%);
 }
+
+.p-Select-select{
+    color: white;
+}

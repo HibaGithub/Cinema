@@ -18,7 +18,6 @@ return new class extends Migration
             $table->string('fakename');
             $table->bigInteger('idfilms')->unsigned();
             $table->foreign('idfilms')->references('id')->on('films')->onDelete('cascade');
-         
         });
     }
 

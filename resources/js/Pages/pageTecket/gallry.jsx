@@ -3,7 +3,8 @@ import React  from "react";
 export default function  Gallry({datag}){
     
     return (
-<div className='gallry-container'>
+        
+          <div className='gallry-container'>
             <div class="titleGallry">
                 <h1>The Matrix Resurrections</h1>
             </div>
@@ -24,12 +25,13 @@ export default function  Gallry({datag}){
             <section class='sectionGallry '>
                     { datag.map((f)=>
                         <article>
-                            <img src={`BlackAdam/gallry/${f.image}`} alt="image" />
+
+                            <img src={`BlackAdam/${f.image}`} alt="image" />
                             <img src="" alt="" />
+                          <img src="" alt="" />
                             <img src="" alt="" />
-                            <img src="" alt="" />
-                            <img src="" alt="" />
-                            {/* <img src="" alt="" /> */}
+                            <img src="" alt="" /> 
+                          
                         </article>
                     )}
                    
